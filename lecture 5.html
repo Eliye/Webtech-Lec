@@ -6,21 +6,21 @@
 	             <li><a href="index.html">HOME</a></li>
 	             <li>LECTURES
 	                 <ul class="navlecture">
-	                      <li><a href ="lecture 1.html">Lecture 1</a></li>
+	                     <li><a href ="lecture 1.html">Lecture 1</a></li>
 	                     <li><a href ="lecture 2.html">Lecture 2</a></li>
 	                     <li><a href ="lecture 3.html">Lecture 3</a></li>
 	                     <li><a href ="lecture 4.html">Lecture 4</a></li>
-						 <li><a href ="lecture 5.html">Lecture 5</a></li>
+			     <li><a href ="lecture 5.html">Lecture 5</a></li>
 	                     <li><a href ="lecture 6.html">Lecture 6</a></li>
 	                     <li><a href ="lecture 7.html">Lecture 7</a></li>
 	                     <li><a href ="lecture 8.html">Lecture 8</a></li>
 	                     <li><a href ="lecture 9.html">Lecture 9</a></li>
 	                     <li><a href ="lecture 10.html">Lecture 10</a></li>
-					     <li><a href ="lecture 11.html">Lecture 11</a></li>
-					     <li><a href ="lecture 12.html">Lecture 12</a></li>
-					     <li><a href ="lecture 13.html">Lecture 13</a></li>
-					     <li><a href ="lecture 14.html">Lecture 14</a></li>
-					     <li><a href ="lecture 15.html">Lecture 15</a></li> 
+			     <li><a href ="lecture 11.html">Lecture 11</a></li>
+		             <li><a href ="lecture 12.html">Lecture 12</a></li>
+			     <li><a href ="lecture 13.html">Lecture 13</a></li>
+			     <li><a href ="lecture 14.html">Lecture 14</a></li>
+			     <li><a href ="lecture 15.html">Lecture 15</a></li> 
 	                 </ul>
 	             </li>
 	             <li><a>GLOSSARY</a></li>
@@ -29,7 +29,7 @@
 	     </nav>
 	      
 	      
-		 <div class="lecture lecture3" id = "lecture3">
+		 <div class="lecture lecture5" id = "lecture5">
 		     <h1>LESSON 5: HTTP Request Methods</h1>
 			 <ul>
 				 <li><H2>GET</H2></li>
@@ -41,8 +41,12 @@
 				 
 				 <li><h2>HEAD</h2></li>
 				 <p>
-					 Same as GET but exluding the message body. This is used to retrieve metadata<br/> 
-				     about the entity implied by request.
+					 Same as GET, except that the entity is not included in the reponse
+					 (i.e returns only the status line and header returned by a request without the message body <br>
+					 . This is used to retrieve metadata about the entity implied by request without 
+					 transferring the entity itself (e.g to test for link validity or resource modification). <br>
+					 Like GET, it is supported by all general-purpose servers. <br/>
+				 
 				 </p>
 				 
 				 <li><h2>POST</h2></li>
@@ -64,13 +68,15 @@
 				 
 				 <li><h2>OPTIONS</h2></li>
 				 <p>
-					 Request information about the communication options available.
+					 Request information about the communication options available for the resource
+					 identified by the Request URI.
 				 </p>
 				 
 				 <li><h2>TRACE</h2></li>
 				 <p>
 					 Request a loop-back of the request message (ie., request the server<br/> 
-				     to echo back to the client the received request message.
+				     to echo back to the client the received request message.<br>
+					 Typically used for testing or diagnostics of the request or response chain.
 				 </p>
 				 
 				 <li><h2>CONNECT</h2></li>
@@ -78,7 +84,8 @@
 					 Request the establishment of a tunnel to the destination<br/> 
 				     origin server, and if successful, thereafter restrict its<br/>
 					 behavior to blind-forwarding of packets in both direction<br/>
-					 until the tunnel is closed.
+					 until the tunnel is closed.<br/>
+					 Commonly used to create an end to end virtual connection through one or more proxies.
 				 </p>
 				 
 			 </ul>
