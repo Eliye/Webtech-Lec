@@ -1,163 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Course Website | IT 324</title>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="icon" href="#"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
 </head>
-    
+
 <body>
-    <header>
-        <nav class="navclass">
-            <div class="navbar">
-                <div class="navlogo"><img src="#"></div>
-                <div class="navlinks">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li>LECTURE TOPIC
-                            <ul class="navtopic">
-                                <li><a href ="lecture 1.html">Topic 1</a></li>
-                                <li><a href ="lecture 2.html">Topic 2</a></li>
-                                <li><a href ="lecture 3.html">Topic 3</a></li>
-                                <li><a href ="lecture 4.html">Topic 4</a></li>
-                                <li><a href ="lecture 5.html">Topic 5</a></li>
-                                <li><a href ="lecture 6.html">Topic 6</a></li>
-                                <li><a href ="lecture 7.html">Topic 7</a></li>
-                                <li><a href ="lecture 8.html">Topic 8</a></li>
-                            </ul>
-                        </li>
-                        <li><a>GLOSSARY</a></li>
-                        <li><a>ABOUT OUR PAGE</a></li>
-                    </ul>
-                </div>    
-            </div>    
-        </nav>
-	</header>
-    
-    <section>
-        <div class="lecture lecture8" id="lecture8">
-            <h1>TOPIC 8: HTTP Status Codes</h1>
-            <div class="sc1">
-                <h3>Informational (1XX)</h3>
-                <div class="1xx">
-                    <h4>100 Continue</h4>
-                    <p></p>
-                    <h4>101 Switching Protocol</h4>
-                    <p></p>
-                </div>
-                <ul></ul>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WebTek 2017</a>
             </div>
-            <div class="sc2">
-                <h3>Success (2XX)</h3>
-                <div class="2xx">
-                    <h4>200 Ok</h4>
-                    <p></p>
-                    <h4>201 Created</h4>
-                    <p></p>
-                    <h4>202 Accepted</h4>
-                    <p></p>
-                    <h4>203 Non-Authoritative Information</h4>
-                    <p> Certain part of response not coming from origin server. </p>
-                    <h4>204 No Content</h4>
-                    <p> Successful delete. </p>
-                    <h4>205 Reset Content</h4>
-                    <p> Instruct client can reset. </p>
-                    <h4>206 Partial Content</h4>
-                    <p> Server tells that this is not the whole resource. </p>
-                </div>
-                <ul></ul>
-            </div>
-            <div class="sc3">
-                <h3>Redirection (3XX)</h3>
-                <div class="3xx">
-                    <h4>300 Multiple Choice</h4>
-                    <p> Respond with 300 (redirect) and gives choices. </p>
-                    <h4>301 Moved Permanently</h4>
-                    <p></p>
-                    <h4>302 Found</h4>
-                    <p></p>
-                    <h4>303 See Other</h4>
-                    <p></p>
-                    <h4>304 Not Modified</h4>
-                    <p></p>
-                    <h4>305 Use Proxy</h4>
-                    <p> Gives the URL of proxy using the location. </p>
-                    <h4>306 (unused)</h4>
-                    <p></p>
-                    <h4>307 Temporary Redirect</h4>
-                    <p></p>
-                </div>
-                <ul></ul>
-            </div>
-            <div class="sc4">
-                <h3>Client Error (4XX)</h3>
-                <div class="4xx">
-                    <h4>400 Bad Request</h4>
-                    <p></p>
-                    <h4>401 Unauthorized</h4>
-                    <p></p>
-                    <h4>402 Payment Required</h4>
-                    <p> e.g. Online payments</p>
-                    <h4>403 Forbidden</h4>
-                    <p> Supposed not to access source. </p>
-                    <h4>404 Not Found</h4>
-                    <p></p>
-                    <h4>405 Method Not Allowed</h4>
-                    <p></p>
-                    <h4>406 Not Acceptable</h4>
-                    <p></p>
-                    <h4>407 Proxy Authentication Required</h4>
-                    <p></p>
-                    <h4>408 Request Time-out</h4>
-                    <p></p>
-                    <h4>409 Conflict</h4>
-                    <p> Whatever request can not be done because of conflict. </p>
-                    <h4>410 Gone</h4>
-                    <p> Resource not longer there. </p>
-                    <h4>411 Length Required</h4>
-                    <p> Server expecting content length. </p>
-                    <h4>412 Precondition Failed</h4>
-                    <p> Condition has failed, con not proceed. </p>
-                    <h4>413 Request Entity Too Large</h4>
-                    <p> Denial of server. </p>
-                    <h4>414 Request URI Too Large</h4>
-                    <p> To long to be handled by server. </p>
-                    <h4>415 Unsupported Media Type</h4>
-                    <p> Can reject upload. </p>
-                    <h4>416 Requested Range Not Satisfiable</h4>
-                    <p></p>
-                    <h4>417 Expectation Failed</h4>
-                    <p></p>
-                    <h4>426 Upgrade Required (new)</h4>
-                    <p> Using feature that needs to be upgrade. </p>
-                </div>
-            </div> 
-            <div class="sc5">
-                <h3>Server Error (5XX)</h3>
-                <div class="5xx">
-                    <h4>500 Internal Server Error</h4>
-                    <p></p>
-                    <h4>501 Not Implemented</h4>
-                    <p></p>
-                    <h4>502 Bad Gateway</h4>
-                    <p> Gateway having problems. </p>
-                    <h4>503 Service Unavailable</h4>
-                    <p> Doing maintenance. </p>
-                    <h4>504 Gateway Time-out</h4>
-                    <p></p>
-                    <h4>505 HTTP Version Not Supported</h4>
-                    <p></p>
-                </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Prelim</a></li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-    
-    <footer>
-        <div class="">
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#1xx">Informational (1xx)<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#2xx">Success (2xx)</a></li>
+                    <li><a href="#3xx">Redirection (3xx)</a></li>
+                    <li><a href="#4xx">Client Error (4xx)</a></li>
+                    <li><a href="#5xx">Server Error (5xx)</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">HTTP Status Codes</h1>
+
+                <div class="sc-container">
+                    <div class="status sc" id="1xx">
+                        <strong>Informational</strong> (1xx)
+                    </div>
+
+                    <div class="code">
+                        <h5><strong>100</strong> Continue</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>101</strong> Switching Protocol</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>102</strong> Processing (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sc-container">
+                    <div class="status sc" id="2xx">
+                        <strong>Success</strong> (2xx)
+                    </div>
+                    <div class="code">
+                        <h5><strong>200</strong> OK</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>201</strong> Created</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>202</strong> Accepted</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>203</strong> Non-Authoritative Information</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>204</strong> No Content</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>205</strong> Reset Content</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>206</strong> Partial Content</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>207</strong> Multi-Status (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>208</strong> Already Reported (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>226</strong> IM Used</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sc-container">
+                    <div class="status sc" id="3xx">
+                        <strong>Redirection</strong> (3xx)
+                    </div>
+                    <div class="code">
+                        <h5><strong>300</strong> Multiple Choices</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>301</strong> Moved Permanently</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>302</strong> Found</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>303</strong> See Other</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>304</strong> Not Modified</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>305</strong> Use Proxy</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>306</strong> (Unused)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>307</strong> Temporary Redirect</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>308</strong> Permanent Redirect (experimental)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sc-container">
+                    <div class="status sc" id="4xx">
+                        <strong>Client Error</strong> (4xx)
+                    </div>
+                    <div class="code">
+                        <h5><strong>400</strong> Bad Request</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>401</strong> Unauthorized</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>402</strong> Payment Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>403</strong> Forbidden</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>404</strong> Not Found</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>405</strong> Method Not Allowed</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>406</strong> Not Acceptable</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>407</strong> Proxy Authentication Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>408</strong> Request Timeout</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>409</strong> Conflict</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>410</strong> Gone</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>411</strong> Length Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>412</strong> Precondition Failed</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>413</strong> Request Entity Too Large</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>414</strong> Request-URI Too Long</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>415</strong> Unsupported Media Type</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>416</strong> Requested Range Not Satisfiable</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>417</strong> Expectation Failed</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>418</strong> I'm a teapot (RFC 2324)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>420</strong> Enhance Your Calm (Twitter)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>422</strong> Unprocessable Entity (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>423</strong> Locked (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>424</strong> Failed Dependency (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>425</strong> Reserved for WebDAV</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>426</strong> Upgrade Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>428</strong> Precondition Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>429</strong> Too Many Requests</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>431</strong> Request Header Fields Too Large</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>444</strong> No Response (Nginx)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>449</strong> Retry With (Microsoft)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>450</strong> Blocked by Windows Parental Controls (Microsoft)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>451</strong> Unavailable For Legal Reasons</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>499</strong> Client Closed Request (Nginx)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sc-container">
+                    <div class="status sc" id="5xx">
+                        <strong>Server Error</strong> (5xx)
+                    </div>
+                    <div class="code">
+                        <h5><strong>500</strong> Internal Server Error</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>501</strong> Not Implemented</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>502</strong> Bad Gateway</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>503</strong> Service Unavailable</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>504</strong> Gateway Timeout</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>505</strong> HTTP Version Not Supported</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>506</strong> Variant Also Negotiates (Experimental)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>507</strong> Insufficient Storage (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>508</strong> Loop Detected (WebDAV)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>509</strong> Bandwidth Limit Exceeded (Apache)</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>510</strong> Not Extended</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>511</strong> Network Authentication Required</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>598</strong> Network read timeout error</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="code">
+                        <h5><strong>599</strong> Network connect timeout error</h5>
+                        <hr>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                
+                <!--To be excluded-->
+                <div class="row placeholders">
+
+                </div>
+
+            </div>
+
         </div>
-    </footer>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
     
+    <script src="assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
-    
+
 </html>
