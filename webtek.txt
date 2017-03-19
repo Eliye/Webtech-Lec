@@ -1,0 +1,11 @@
+authentication - https://en.wikipedia.org/wiki/Basic_access_authentication
+cache control- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+control media type specification -https://en.wikipedia.org/wiki/Media_type
+language and character set specification-https://tools.ietf.org/html/rfc2231
+content/transfer coding-https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html
+content negotiation- https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html
+client protocol negotiation-https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html
+server protocol negotiation-https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html
+persisten connection-https://en.wikipedia.org/wiki/HTTP_persistent_connection
+request pipelining- https://en.wikipedia.org/wiki/HTTP_pipelining
+
