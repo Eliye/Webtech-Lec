@@ -27,13 +27,27 @@
                  <ul>
 		    	 <li>Cache Control</li>
 			 <li>Connection</li>
+			     <p>The Connection general-header field allows the sender to specify options that are desired for that particular connection 
+				     and MUST NOT be communicated by proxies over further connections. </p>
 		    	 <li>Date</li>
+			     <p> The Date general-header field represents the date and time at which the message was originated, 
+				     having the same semantics as orig-date in RFC 822. </p>
 			 <li>Pragma</li>
+			     <p> The Pragma general-header field is used to include implementation- specific directives that might apply to any recipient 
+				     along the request/response chain. </p>
 			 <li>Trailer</li>
-                         <li>Transfer Encoding</li>	
+			     <p> The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding. </p>
+                         <li>Transfer Encoding</li>
+			     <p> The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to 
+				     safely transfer it between the sender and the recipient. </p>
 			 <li>Upgrade</li>
+			     <p> The Upgrade general-header allows the client to specify what additional communication protocols it supports and would like to use if the server 
+				     finds it appropriate to switch protocols. </p>
                          <li>Via</li>
+			     <p> The Via general-header field MUST be used by gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, 
+				     and between the origin server and the client on responses. </p>
                          <li>Warning</li>
+			     <p> The Warning general-header field is used to carry additional information about the status or transformation of a message which might not be reflected in the message. </p>
                 </ul>
                 <h3>Request Header Fields</h3>
                 <ul>
