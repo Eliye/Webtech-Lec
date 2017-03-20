@@ -22,11 +22,10 @@
 	      </nav>
 	      
 	      
-	<div class="lecture lecture5" id = "lecture5">
+<div class="lecture lecture5" id = "lecture5">
 	<h1>LESSON 5: HTTP Response Message</h1>
 	<ul>
 	<li> Status Line (CRLF terminated line consisting of three space-separated values)</li>
-	<ul/>
       <ul>
 	  <p>HTTP Protocol version</p>
           <li>Status Code</li>
@@ -35,28 +34,27 @@
               <p>- descriptive representation of status code. </p>
 	  <li>Response Header Fields</li> 
 	      <p>- allow the server to pass additional information about the response which cannot be placed in the Status- Line. </p>
-<ul>
-<li> Accept-Ranges </li>
-<p> allows the server to indicate its acceptance of range requests for a resource </p>
-<li> Age </li>
-<p> estimate the sender's amount of time since the response </p>
-<li> Etag </li>
-<p> provides the current value of the entity tag for the requested variant </p>
-<li> Location </li>
-<p> used to redirect the recipient to a location </p>
-<li> Proxy-Authenticate </li>
-<p> consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy </p>
-<li> Retry-After </li>
-<p> indicate how long the service is expected to be unavailable </p>
-<li> Server </li>
-<p> contains information about the software used by the origin server to handle the request </p>
-<li> Vary </li>
-<p> indicates the set of request-header fields that fully determines, while the response is fresh </p>
-<li> WWW-Authenticate </li>
-<p> consists of at least one challenge that indicates the authentication schemes and parameters </p>
-
 </ul>
-      </ul>
+<ul>
+<strong> Accept-Ranges </strong>
+<p> allows the server to indicate its acceptance of range requests for a resource </p>
+<strong> Age </strong>
+<p> estimate the sender's amount of time since the response </p>
+<strong> Etag </strong>
+<p> provides the current value of the entity tag for the requested variant </p>
+<strong> Location </strong>
+<p> used to redirect the recipient to a location </p>
+<strong> Proxy-Authenticate </strong>
+<p> consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy </p>
+<strong> Retry-After </strong>
+<p> indicate how long the service is expected to be unavailable </p>
+<strong> Server </strong>
+<p> contains information about the software used by the origin server to handle the request </p>
+<strong> Vary </strong>
+<p> indicates the set of request-header fields that fully determines, while the response is fresh </p>
+<strong> WWW-Authenticate </strong>
+<p> consists of at least one challenge that indicates the authentication schemes and parameters </p>
+</ul>
 
         <li>Message Headers </li>
 <p> - general, client request and/or entity headers </p>
@@ -66,10 +64,11 @@
 <p> -  optional ; used to carry the entity-body associated with the request or response </p>
 	<li>Message Length </li>
 <p> - message-body length that appears in the message </p>
-<p> Transfer-Encoding header field - is present and has any value other than "identity", then the transfer-length is defined by use of the "chunked" transfer-coding </p>
-<p> Content-Length header field is present, its decimal value in OCTETs represents both the entity-length and the transfer-length </p>
+<p> <strong> Transfer-Encoding header field </strong> - is present and has any value other than "identity", then the transfer-length is defined by use of the "chunked" transfer-coding. </p>
+<p> <strong> Content-Length header field </strong> - is present, its decimal value in OCTETs represents both the entity-length and the transfer-length. </p>
 	<li>General Header Fields </li>
-<p> - only applied to message that is being transmitted </p>
+<p> - only applied to message that is being transmitted. </p>
+</ul>
 	</div>
 <footer> 
 <p> <strong> References </strong> </p> 
