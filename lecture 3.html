@@ -1,65 +1,126 @@
-<!DOCTYPE HTML>
-	<html>
-	  <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
-	                <li><a href ="lecture 6.html">Lecture 6</a></li>
-	                <li><a href ="lecture 7.html">Lecture 7</a></li>
-	                <li><a href ="lecture 8.html">Lecture 8</a></li>
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-	      
-	      
-	<div class="lecture lecture3" id="lecture3">
-	<h1>LESSON 3: Hypertext Resource Addressing (HTTP)</h1>
-	<h3>HTTP</h3>
-	<ul>
-	<li> HTTP resources are identified using URIs(RFC 3986) or more specifically, HTTP URLs.</li>
-	<ul>
-	<li>Scheme (http or https)</li>
-	<li>Authority
-      <ul>
-          <li>user information or authentication credentials (deprecated) </li>
-          <li>host
-             <ul>
-                <li>domain name (resolved to an IP address using DNS(Domain Name System) of the server where the resource resides (or will be created))
-                </li>
-             </ul>
-          </li>
-          <li>port number </li>
-         
-      </ul>
-  </li>
-	<li>Path to resource (resolved relative to the document root on the server)
-	  <ul>
-        <li>may refer to a static or dynamic resource</li>
-	  </ul>
-  </li>
-  
-	<li>Query
-  <ul>
-      <li>typically provided as key = value pairs, with ampersand (&) separators between key/value pairs</li>
-      <li>may be URL -encoded</li>
-  </ul>
-  
-  <li>Fragment identifier</li>
-	<ul>
-          <li>typically used in a browser's end </li>
-		<li>sometimes called bookmark</li>
-         </ul>
-	</div>
-	    
-	    </body>
-	</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Hypertext Resource Addressing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lecture3.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#httpra">Hypertext Resource Addressing</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="httpra">Hypertext Resource Addressing</h1>
+
+                <div class="hra-con">
+                    <div class="net hra">
+                        <strong>Hypertext Resource Addressing</strong>
+                    </div>
+                    <ul class="hra-definition">
+                        <li> HTTP resources are identified using URIs <a href=https://www.ietf.org/rfc/rfc3986.txt> (RFC 3986) </a> or more specifically, HTTP URLs.</li>
+                        <ul>
+                            <li>Scheme (http or https)</li>
+                            <li>Authority
+                                <ul>
+                                    <li>user information or authentication credentials (deprecated) </li>
+                                    <li>host
+                                        <ul>
+                                            <li>domain name (resolved to an IP address using <a href=https://en.wikipedia.org/wiki/Domain_Name_System>DNS(Domain Name System)</a> of the server where the resource resides (or will be created))
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>port number </li>
+
+                                </ul>
+                            </li>
+                            <li>Path to resource (resolved relative to the document root on the server)
+                                <ul>
+                                    <li>may refer to a static or dynamic resource</li>
+                                </ul>
+                            </li>
+
+                            <li>Query
+                                <ul>
+                                    <li>typically provided as key = value pairs, with ampersand (&) separators between key/value pairs</li>
+                                    <li>may be URL -encoded</li>
+                                </ul>
+
+                                <li>Fragment identifier</li>
+                                <ul>
+                                    <li>typically used in a browser's end </li>
+                                    <li>sometimes called "bookmark"</li>
+                                </ul>
+                        </ul>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
