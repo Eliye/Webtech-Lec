@@ -1,105 +1,178 @@
-<!DOCTYPE HTML>
-<html>
-	 <body>
-	     <nav class="navClass">
-	         <ul>
-	             <li><a href="index.html">HOME</a></li>
-	             <li>LECTURES
-	                 <ul class="navlecture">
-	                     <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                     <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                     <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                     <li><a href ="lecture 4.html">Lecture 4</a></li>
-			     <li><a href ="lecture 5.html">Lecture 5</a></li>
-	                     <li><a href ="lecture 6.html">Lecture 6</a></li>
-	                     <li><a href ="lecture 7.html">Lecture 7</a></li>
-	                     <li><a href ="lecture 8.html">Lecture 8</a></li>
-	                 </ul>
-	             </li>
-	             <li><a>GLOSSARY</a></li>
-	             <li><a>ABOUT OUR PAGE</a></li>
-	         </ul>
-	     </nav>
-	      
-	      <div class="lecture lecture6" id = "lecture6">
-		     <h1>LESSON 6: HTTP Request Methods</h1>
-			 <h3>Standard Methods</h3>
-			 <ul>
-				 <li><H2>GET</H2></li>
-				 <p>
-					 This is the most commonly used method. It is used to retrieve information from <br/>
-					 the given server using a given URI. Requests using GET should only retrieve <br/>
-					 data and should have no other effect on the data.
-				 </p>
-				 
-				 <li><h2>HEAD</h2></li>
-				 <p>
-					 Same as GET, except that the entity is not included in the reponse
-					 (i.e returns only the status line and header returned by a request without the message body <br>
-					 . This is used to retrieve metadata about the entity implied by request without 
-					 transferring the entity itself (e.g to test for link validity or resource modification). <br>
-					 Like GET, it is supported by all general-purpose servers. <br/>
-				 
-				 </p>
-				 
-				 <li><h2>POST</h2></li>
-				 <p>
-					 Perform resource-specific processing of the entities<br/> 
-				     enclosed in the message body by the resource.
-				 </p>
-				 
-				 <li><h2>PUT</h2></li>
-				 <p>
-					 Store the enclosed entity in the message body<br/> 
-				     under the specified Request URI.
-				 </p>
-				 
-				 <li><h2>DELETE</h2></li>
-				 <p>
-					 Remove the resource associated with the request URI.
-				 </p>
-				 
-				 <li><h2>OPTIONS</h2></li>
-				 <p>
-					 Request information about the communication options available for the resource
-					 identified by the Request URI.
-				 </p>
-				 
-				 <li><h2>TRACE</h2></li>
-				 <p>
-					 Request a loop-back of the request message (ie., request the server<br/> 
-				     to echo back to the client the received request message.<br>
-					 Typically used for testing or diagnostics of the request or response chain.
-				 </p>
-				 
-				 <li><h2>CONNECT</h2></li>
-				 <p>
-					 Request the establishment of a tunnel to the destination<br/> 
-				     origin server, and if successful, thereafter restrict its<br/>
-					 behavior to blind-forwarding of packets in both direction<br/>
-					 until the tunnel is closed.<br/>
-					 Commonly used to create an end to end virtual connection through one or more proxies.
-				 </p>
-				 </ul>
-				 <h3>Extension Methods</h3>
-				 <ul>
-				  <li><H3>Example: Web DAV(RFC 4918)</H3></li>
-				 <p>
-					PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK
-				 </p>
-				 </ul>
-				 <h3> Safe Methods </h3>
-                                      <p> GET and HEAD methods should not have the significance of taking an action other than retrieval. </p>
-                                 <h3> Idempotent Methods </h3>
-                                      <p> Identical requests is the same as for a single request. </p>
-		                 <h3> Cacheable Methods </h3>
-                                      <p> It is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached </p>
-			 </ul>
-		
-	     </div>
-<footer> 
-<p> <strong> References </strong> </p> 
-<p> https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html </p>
-</footer>
-	 </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HTTP Request Methods</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lecture6.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#standard">Standard Methods</a></li>
+                    <li><a href="#extension">Extension Methods</a></li>
+                    <li><a href="#safe">Safe Methods</a></li>
+                    <li><a href="#idempotent">Idempotent Methods</a></li>
+                    <li><a href="#cacheable">Cacheable Methods</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="standard">HTTP Request Methods</h1>
+
+                <div class="rqm-con">
+                    <div class="net rqm">
+                        <strong>Standard Methods</strong>
+                    </div>
+                    <div class="method">
+                        <h5><strong>GET</strong></h5>
+                        <hr>
+                        <p>This is the most commonly used method. It is used to retrieve information from the given server using a given URI. Requests using GET should only retrieve data and should have no other effect on the data. </p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>HEAD</strong></h5>
+                        <hr>
+                        <p>Same as GET, except that the entity is not included in the reponse (i.e returns only the status line and header returned by a request without the message body. This is used to retrieve metadata about the entity implied by request without transferring the entity itself (e.g to test for link validity or resource modification). Like GET, it is supported by all general-purpose servers. </p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>POST</strong></h5>
+                        <hr>
+                        <p>Perform resource-specific processing of the entities enclosed in the message body by the resource. </p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>PUT</strong></h5>
+                        <hr>
+                        <p>Store the enclosed entity in the message body under the specified Request URI.</p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>DELETE</strong></h5>
+                        <hr>
+                        <p>Remove the resource associated with the request URI. </p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>OPTIONS</strong></h5>
+                        <hr>
+                        <p>Request information about the communication options available for the resource identified by the Request URI.</p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>TRACE</strong></h5>
+                        <hr>
+                        <p>Request a loop-back of the request message (ie., request the server to echo back to the client the received request message. Typically used for testing or diagnostics of the request or response chain.</p>
+                    </div>
+                    <div class="method">
+                        <h5><strong>CONNECT</strong></h5>
+                        <hr>
+                        <p>Request the establishment of a tunnel to the destination origin server, and if successful, thereafter restrict its behavior to blind-forwarding of packets in both direction until the tunnel is closed. Commonly used to create an end to end virtual connection through one or more proxies.</p>
+                    </div>
+                </div>
+                <div class="rqm-container" id="extension">
+                    <div class="net rqm">
+                        <strong>Extension Methods</strong>
+                    </div>
+                    <div class="method">
+                        <h5><strong>Example: WebDAV (RFC 4918)</strong></h5>
+                        <hr>
+                        <p><a href=http://www.restpatterns.org/HTTP_Methods/PROPFIND>PROPFIND</a>, <a href=http://www.restpatterns.org/HTTP_Methods/PROPPATCH>PROPPATCH</a>,
+						<a href=http://www.restpatterns.org/HTTP_Methods/MKCOL> MKCOL</a>, <a href=http://www.restpatterns.org/HTTP_Methods/COPY>COPY</a>,
+						<a href=http://www.restpatterns.org/HTTP_Methods/MOVE>MOVE</a>, <a href=http://www.restpatterns.org/HTTP_Methods/LOCK> LOCK</a>, <a href=http://www.restpatterns.org/HTTP_Methods/UNLOCK>UNLOCK</a></p>
+                    </div>
+                </div>
+                <div class="rqm-container" id="safe">
+                    <div class="net rqm">
+                        <strong>Safe Methods</strong>
+                    </div>
+                    <p class="rqm-definition">GET and HEAD methods should not have the significance of taking an action other than retrieval.</p>
+                    <hr>
+                </div>
+                <div class="rqm-container" id="idempotent">
+                    <div class="net rqm">
+                        <strong>Idempotent Methods</strong>
+                    </div>
+                    <p class="rqm-definition">Identical requests is the same as for a single request.</p>
+                    <hr>
+                </div>
+                <div class="rqm-container" id="cacheable">
+                    <div class="net rqm">
+                        <strong>Cacheable Methods</strong>
+                    </div>
+                    <p class="rqm-definition">It is an HTTP response that can be cached, that is stored to be retrieved and used later, saving a new request to the server. Not all HTTP responses can be cached.</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
+                    <hr>
+                    <p>References:</p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
 </html>
