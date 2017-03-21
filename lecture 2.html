@@ -1,120 +1,180 @@
-<!DOCTYPE HTML>
-	<html>
-	  <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
-	                <li><a href ="lecture 6.html">Lecture 6</a></li>
-	                <li><a href ="lecture 7.html">Lecture 7</a></li>
-	                <li><a href ="lecture 8.html">Lecture 8</a></li>
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-	      
-	      
-	<div class="lecture lecture2" id="lecture2">
-	<h1>LESSON 2: Hypertext Transfer Protocol (HTTP)</h1>
-	<h3>HTTP</h3>
-	<ul>
-	<li>application layer communications protocol used to access resources (hypertext/hypermedia) on the World Wide Web.</li>
-	<li>invented by Tim Berners-Lee</li>
-	<li>jointly developed by the W3C and the IETF</li>
-	<li>version history :<br />
-	<ul>
-	<li>HTTP 0.9 (1991)</li>
-	<li>HTTP 1.0 (RFC 1945, May 1996) ;</li>
-	<li>HTTP 1.1 (RFS 2068 Jan 1997, RFC 2116 Jun 1999), RFC 7230 - 7235 (Jun 2014) ;</li>
-	<li>HTTP 2 (RFC 7540 May 2015) ;
-	<ul>
-	</ul>
-	</li>
-	</ul>
-	</li>
-	</ul>
-	<h3>HTTP Fundamentals</h3>
-	<ul>
-	<li>HTTP runs on top of TCP/IP, using TCP port 80 by default or TCP port 443 for HTPPS (over SSL/TLS)</li>
-	<li>HTTP is based on a client - server architecture
-	<ul>
-	<li>Client, a.k.a. user agents (UA) : request resources from server.
-		<li> Web Client : ex. web browsers such as Chrome, Edge, Firefox ..
-			Web crawlers/spiders : ex. googlebot of Chrome
-		<li> http Client : ex. applications in mobile
-	<ul>
-	<li>web browser, web crawlers/spider, other end user tools and applications</li>
-	</ul>
-	</li>
-	<li>Servers :
-	<ul>
-	<li>Origin Server - web resources are physically there. 
-			  - a machine with application running through web.</li>
-	<li>Proxy Servers (to authenticate), gateways, tunnels (blind relay)</li>
-	</ul>
-	</li>
-	</ul>
-	</li>
-	<li>HTTP uses a request-response standard protocol
-	<ul>
-	<li>the clients sends an HTTP request message to the server</li>
-	<li>the server processes the request and replies with an HTTP response message
-		* pull, polling (check server ; refreshing)</li>
-	<li> STATELESS </li>
-	<li> figures what clients want to do but soon forgets client (save and forget)
-	<li> MIME </li>
-	<li> Multipurpose Internet Mail Extensions
-		ex. (file/format) : txt/html , img/png
-		
-	</ul>
-	</li>
-	<li>HTTP is a stateless communications protocol
-	<ul>
-	<li>Servers do not keep information about clients in-between request</li>
-	</ul>
-	</li>
-	<li>HTTP provides support for other functionalities, such as :
-	<ul>
-	<li>cache control - general-header field is used to specify directives for caching mechanisms in both, requests and responses</li>
-	<li>control media type (MIME) specification - two-part identifier for file formats and format contents transmitted on the Internet.
-		The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these 
-		classifications</li>
-	<li>language and character set specification - may appear at the beginning of the parameter value
-				-Asterisks ("*") are reused to provide the indicator that language and
-				   character set information is present and encoding is being used. A
-				   single quote ("'") is used to delimit the character set and language
-				   information at the beginning of the parameter value. Percent signs
-				   ("%") are used as the encoding flag, which agrees with RFC 2047.</li>
-	<li>content/transfer coding - used to indicate the type of transformation that has been used in order to represent the body in an 
-		acceptable manner for transport.
-				    - designed to specify an invertible mapping between the "native" representation of a type of data and a 
-					representation that can be readily exchanged using 7 bit mail transport protocols, such as those 
-					defined by RFC 821 (SMTP).</li>
-	<li>content negotiation - the process of selecting the best representation for a given response when there are multiple representations 
-				available.</li>
-	<li>client protocol negotiations - selection of the best representation for a response is performed by the user agent after receiving an 
-		initial response from the origin server.</li>
-	<li>server protocol negotiations - the selection of the best representation for a response is made by an algorithm located at the server</li>
-	<li>persistent connection - HTTP keep-alive, or HTTP connection reuse, is the idea of using a single TCP connection to send and receive 
-		multiple HTTP requests/responses, as opposed to opening a new connection for every single request/response pair.</li>
-	<li>request pipelining - is a technique in which multiple HTTP requests are sent on a single TCP connection without waiting for the 
-		corresponding responses.</li>
-	<li>authentication/authorization - the simplest technique for enforcing access controls to web resources because it doesn't require 
-		cookies, session identifiers, or login pages; rather, HTTP Basic authentication uses standard fields in the HTTP header, 
-		obviating the need for handshakes.</li>
-	<li>etc.</li>
-	</ul>
-	</li>
-	</ul>
-	</div>
-	    
-	    </body>
-	</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Hypertext Transfer Protocol (HTTP)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lecture2.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#httptp">HTTP</a></li>
+                    <li><a href="#fundamentals">HTTP Fundamentals</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="httptp">Hypertext Transfer Protocol (HTTP)</h1>
+
+                <div class="http-con">
+                    <div class="net http">
+                        <strong>HTTP</strong>
+                    </div>
+                    <ul class="http-definition">
+                        <li>application layer communications protocol used to access resources (hypertext/hypermedia) on the World Wide Web.</li>
+                        <li>invented by <a href=https://www.w3.org/People/Berners-Lee>Tim Berners-Lee </a></li>
+                        <li>jointly developed by the <a href=https://www.w3.org>W3C</a> and the <a href=https://www.ietf.org>IETF</a></li>
+                        <li>version history :
+                            <ul>
+                                <li> <a href=https://www.w3.org/Protocols/HTTP/AsImplemented.html> HTTP 0.9 (1991</a></li>   
+                                <li> <a href=https://tools.ietf.org/html/rfc1945>HTTP 1.0 (RFC 1945, May 1996)</a></li>
+                                <li> <a href=https://www.ietf.org/rfc/rfc2068.txt>HTTP 1.1 (RFC 2068 Jan 1997, RFC 2116 Jun 1999), RFC 7230 - 7235 (Jun 2014)</a></li>
+                                <li> <a href=https://tools.ietf.org/html/rfc7540>HTTP 2 (RFC 7540 May 2015) </a> </li>                      
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="http-container" id="fundamentals">
+                    <div class="net http">
+                        <strong>HTTP Fundamentals</strong>
+                    </div>
+                    <ul class="http-definition">
+                        <li>HTTP runs on top of TCP/IP, using TCP port 80 by default or TCP port 443 for HTPPS (over SSL/TLS)</li>
+                        <li>HTTP is based on a client - server architecture
+                            <ul>
+                                <li>Client, a.k.a. user agents (UA) : request resources from server.
+                                    <li> Web Client : ex. web browsers such as Chrome, Edge, Firefox .. Web crawlers/spiders : ex. googlebot of Chrome
+                                        <li> http Client : ex. applications in mobile
+                                            <ul>
+                                                <li>web browser, web crawlers/spider, other end user tools and applications</li>
+                                            </ul>
+                                        </li>
+                                        <li>Servers :
+                                            <ul>
+                                                <li>Origin Server - web resources are physically there. - a machine with application running through web.</li>
+                                                <li>Proxy Servers (to authenticate), gateways, tunnels (blind relay)</li>
+                                            </ul>
+                                        </li>
+                            </ul>
+                            </li>
+                            <li>HTTP uses a request-response standard protocol
+                                <ul>
+                                    <li>the clients sends an HTTP request message to the server</li>
+                                    <li>the server processes the request and replies with an HTTP response message * pull, polling (check server ; refreshing)</li>
+                                    <li> STATELESS </li>
+                                    <li> figures what clients want to do but soon forgets client (save and forget)
+                                        <li> MIME </li>
+                                        <li> Multipurpose Internet Mail Extensions ex. (file/format) : txt/html , img/png
+
+                                </ul>
+                                </li>
+                                <li>HTTP is a stateless communications protocol
+                                    <ul>
+                                        <li>Servers do not keep information about clients in-between request</li>
+                                    </ul>
+                                </li>
+                                <li>HTTP provides support for other functionalities, such as :
+                                    <ul>
+                                        <li>cache control - general-header field is used to specify directives for caching mechanisms in both, requests and responses</li>
+                                        <li>control media type (MIME) specification - two-part identifier for file formats and format contents transmitted on the Internet. The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications
+                                        </li>
+                                        <li>language and character set specification - may appear at the beginning of the parameter value -Asterisks ("*") are reused to provide the indicator that language and character set information is present and encoding is being used. A single quote ("'") is used to delimit the character set and language information at the beginning of the parameter value. Percent signs ("%") are used as the encoding flag, which agrees with RFC 2047.</li>
+                                        <li>content/transfer coding - used to indicate the type of transformation that has been used in order to represent the body in an acceptable manner for transport. - designed to specify an invertible mapping between the "native" representation of a type of data and a representation that can be readily exchanged using 7 bit mail transport protocols, such as those defined by RFC 821 (SMTP).</li>
+                                        <li>content negotiation - the process of selecting the best representation for a given response when there are multiple representations available.
+                                        </li>
+                                        <li>client protocol negotiations - selection of the best representation for a response is performed by the user agent after receiving an initial response from the origin server.</li>
+                                        <li>server protocol negotiations - the selection of the best representation for a response is made by an algorithm located at the server</li>
+                                        <li>persistent connection - HTTP keep-alive, or HTTP connection reuse, is the idea of using a single TCP connection to send and receive multiple HTTP requests/responses, as opposed to opening a new connection for every single request/response pair.</li>
+                                        <li>request pipelining - is a technique in which multiple HTTP requests are sent on a single TCP connection without waiting for the corresponding responses.</li>
+                                        <li>authentication/authorization - the simplest technique for enforcing access controls to web resources because it doesn't require cookies, session identifiers, or login pages; rather, HTTP Basic authentication uses standard fields in the HTTP header, obviating the need for handshakes.</li>
+                                    </ul>
+                                </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
+                    <hr>
+                    <p>References:</p>
+                    <p><a href="https://en.wikipedia.org/wiki/Basic_access_authentication">authentication - https://en.wikipedia.org/wiki/Basic_access_authentication</a></p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">cache control - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/Media_type">control media type specification - https://en.wikipedia.org/wiki/Media_type</a></p>
+                    <p><a href="https://tools.ietf.org/html/rfc2231">language and character set specification - https://tools.ietf.org/html/rfc2231</a></p>
+                    <p><a href="https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html">content/transfer coding - https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html</a></p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html">content negotiation/client protocol negotiation/server protocol negotiation - https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html</a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection">persistent connection - https://en.wikipedia.org/wiki/HTTP_persistent_connection</a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/HTTP_pipelining">request pipelining - https://en.wikipedia.org/wiki/HTTP_pipelining</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
