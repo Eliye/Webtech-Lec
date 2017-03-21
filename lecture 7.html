@@ -1,148 +1,365 @@
-<!DOCTYPE HTML>
-	<html>
-	    <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
-	                <li><a href ="lecture 6.html">Lecture 6</a></li>
-	                <li><a href ="lecture 7.html">Lecture 7</a></li>
-			<li><a href ="lecture 8.html">Lecture 8</a></li>
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-	      
-	<div class="lecture lecture7" id = "lecture7">
-            <h1>Lesson 7: HTTP Message Headers </h1>
-                <h3>General Header Fields</h3>
-                 <ul>
-		    	 <li>Cache Control</li>
-			 <li>Connection</li>
-			     <p>The Connection general-header field allows the sender to specify options that are desired for that particular connection 
-				     and MUST NOT be communicated by proxies over further connections. </p>
-		    	 <li>Date</li>
-			     <p> The Date general-header field represents the date and time at which the message was originated, 
-				     having the same semantics as orig-date in RFC 822. </p>
-			 <li>Pragma</li>
-			     <p> The Pragma general-header field is used to include implementation- specific directives that might apply to any recipient 
-				     along the request/response chain. </p>
-			 <li>Trailer</li>
-			     <p> The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding. </p>
-                         <li>Transfer Encoding</li>
-			     <p> The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to 
-				     safely transfer it between the sender and the recipient. </p>
-			 <li>Upgrade</li>
-			     <p> The Upgrade general-header allows the client to specify what additional communication protocols it supports and would like to use if the server 
-				     finds it appropriate to switch protocols. </p>
-                         <li>Via</li>
-			     <p> The Via general-header field MUST be used by gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, 
-				     and between the origin server and the client on responses. </p>
-                         <li>Warning</li>
-			     <p> The Warning general-header field is used to carry additional information about the status or transformation of a message which might not be reflected in the message. </p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HTTP Message Headers</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lecture7.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
                 </ul>
-                <h3>Request Header Fields</h3>
-                <ul>
-                    <li>Accept</li>
-			<p> The Accept request-header field can be used to specify certain media types which are acceptable for the response. </p>
-                    <li>Accept-Charset</li>
-			<p> The Accept-Charset request-header field can be used to indicate what character sets are acceptable for the response. </p>
-                    <li>Accept-Encoding</li>
-			<p> The Accept-Encoding request-header field is similar to Accept, but restricts the content-codings (section 3.5) that are acceptable in the response. </p>
-                    <li>Accept-Language</li>
-			<p> The Accept-Language request-header field is similar to Accept, but restricts the set of natural languages that are preferred as a response to the request. </p>
-		    <li>Accept-Ranges</li>
-			<p> The Accept-Ranges header field allows the server to indicate its acceptance of range requests for a resource. </p>
-                    <li>Authorization</li>
-			<p> The Authorization field value consists of credentials containing the authentication information of the user agent for the realm of the resource being requested. </p>
-		    <li>Content-Range</li>
-			<p> The Content-Range header is sent with a partial entity-body to specify where in the full entity-body the partial body should be applied. </p>
-                    <li>Expect</li>
-			<p> The Expect request-header field is used to indicate that particular server behaviors are required by the client. </p>
-                    <li>From</li>
-			<p> The From request-header field, if given, SHOULD contain an Internet e-mail address for the human user who controls the requesting user agent. </p>
-                    <li>Host</li>
-			<p> The Host request-header field specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource. </p>
-		    <li>If-Match</li>
-			<p> The If-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that one of those entities is current by including a list of their associated entity tags in the If-Match header field. </p>
-		    <li>If-Modified-Since</li>
-			<p> The If-Modified-Since request-header field is used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body. </p>
-	            <li>If-None-Match</li>
-			<p> The If-None-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can 
-				verify that none of those entities is current by including a list of their associated entity tags in the If-None-Match header field. The purpose of this feature is to 
-				allow efficient updates of cached information with a minimum amount of transaction overhead. It is also used to prevent a method (e.g. PUT) from inadvertently modifying an existing resource when the client believes that the resource does not exist. </p>
-		    <li>If-Range</li>
-			<p> If a client has a partial copy of an entity in its cache, and wishes to have an up-to-date copy of the entire entity in its cache, it could use the Range request-header with a conditional GET. </p>
-		    <li>If-Unmodified-Since</li>
-			<p> The If-Unmodified-Since request-header field is used with a method to make it conditional. If the requested resource has not been modified since the time specified in this field, the server SHOULD perform the requested operation as if the If-Unmodified-Since header were not present. </p>
-		    <li>Max-Forwards</li>
-			<p> The Max-Forwards request-header field provides a mechanism with the TRACE and OPTIONS methods to limit the number of proxies or gateways that can forward the request to the next inbound server. 
-				This can be useful when the client is attempting to trace a request chain which appears to be failing or looping in mid-chain. </p>
-		    <li>Proxy-Authorization</li>
-			<p> The Proxy-Authorization request-header field allows the client to identify itself (or its user) to a proxy which requires authentication. The Proxy-Authorization field value consists of credentials containing the authentication information of the user agent for the proxy and/or realm of the resource being requested. </p>
-		    <li>Range</li>
-		    <li>Referer</li>
-			<p> The Referer[sic] request-header field allows the client to specify, for the server's benefit, the address (URI) of the resource from which the Request-URI was obtained (the "referrer", 
-				although the header field is misspelled.) The Referer request-header allows a server to generate lists of back-links to resources for interest, logging, optimized caching, etc. 
-				It also allows obsolete or mistyped links to be traced for maintenance. The Referer field MUST NOT be sent if the Request-URI was obtained from a source that does not have its own URI, such as input from the user keyboard. </p>
-		    <li>TE</li>
-			<p> The TE request-header field indicates what extension transfer-codings it is willing to accept in the response and whether or not it is willing to accept trailer fields in a chunked transfer-coding. Its value may consist of the keyword "trailers" and/or a comma-separated list of extension transfer-coding names with optional accept parameters </p>
-		    <li>User-Agent</li>
-			<p> The User-Agent request-header field contains information about the user agent originating the request. </p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#general">General Header Fields</a></li>
+                    <li><a href="#request">Request Header Fields</a></li>
+                    <li><a href="#response">Response Header Fields</a></li>
+                    <li><a href="#entity">Entity Header Fields</a></li>
                 </ul>
-                <h3>Response Headers</h3>
-		    <ul>
-                    <li>Accept</li>
-                    <li>Age</li>
-			    <p> It conveys the sender's estimate of the
-      				amount of time since the response (or its revalidation) was
-				generated at the origin server. </p>
-                    <li>ETag</li>
-			    <p> Short for Entity Tag, is a tag for the entity. </p>
-                    <li>Location</li>
-			    <p> Used for redirection. </p>
-                    <li>Proxy Authenticate</li>
-			    <p> This field MUST be included as part of a 407 (Proxy Authentication Required) response.
-                    <li>Retry-After</li>
-			    <p> Tell the client that service currently not available. </p>
-                    <li>Server</li>
-			    <p> Not a required header. </p>
-                    <li>Vary</li>
-			    <p> Server can tell to change value. </p>
-		    <li>WWW-Authenticate</li>
-			    <p> This response-header field MUST be included in 401 (Unauthorized) response messages. </p>
-                   </ul>
-                <h3>Entity Header Fields</h3>
-		<ul>
-                    <li>Allow</li>
-                    <li>Content Encoding</li>
-			<p> This entity-header field is used as a modifier to the media-type.</p>
-                    <li>Content Language</li>
-			<p> Reader; good for accessibility. </p>
-                    <li>Content Length</li>
-			<p>This entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, 
-				in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.</p>
-                    <li>Content Location</li>
-			<p> Content is being somewhere else. </p>
-                    <li>Content MD5</li>
-			<p> Hashing algorithm; change data and hash. </p>
-                    <li>Content Range</li>
-			<p> Doing range request. </p>
-                    <li>Content Type</li>
-			<p> Specify what content enclosing in message. </p>
-                    <li>Expires</li>
-			<p> This entity-header field gives the date/time after which the response is considered stale.</p>
-                    <li>Last-Modified</li>
-			<p> This entity-header field indicates the date and time at which the origin server believes the variant was last modified.</p>
-		</ul>
-             </div>
-</body>    
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="general">HTTP Message Headers</h1>
+
+                <div class="mh-con">
+                    <div class="net mh">
+                        <strong>General Header Fields</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Cache Control</strong></h5>
+                        <hr>
+                        <p> </p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Connection</strong></h5>
+                        <hr>
+                        <p>The Connection general-header field allows the sender to specify options that are desired for that particular connection and MUST NOT be communicated by proxies over further connections.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Date</strong></h5>
+                        <hr>
+                        <p>The Date general-header field represents the date and time at which the message was originated, having the same semantics as orig-date in RFC 822.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Pragma</strong></h5>
+                        <hr>
+                        <p>The Pragma general-header field is used to include implementation- specific directives that might apply to any recipient along the request/response chain.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Trailer</strong></h5>
+                        <hr>
+                        <p>The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Transfer Encoding</strong></h5>
+                        <hr>
+                        <p>The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Upgrade</strong></h5>
+                        <hr>
+                        <p>The Upgrade general-header allows the client to specify what additional communication protocols it supports and would like to use if the server finds it appropriate to switch protocols.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Via</strong></h5>
+                        <hr>
+                        <p>The Via general-header field MUST be used by gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, and between the origin server and the client on responses.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Warning</strong></h5>
+                        <hr>
+                        <p>The Warning general-header field is used to carry additional information about the status or transformation of a message which might not be reflected in the message.</p>
+                    </div>
+
+                </div>
+                <div class="mh-container" id="request">
+                    <div class="net mh">
+                        <strong>Request Header Fields</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept</strong></h5>
+                        <hr>
+                        <p>The Accept request-header field can be used to specify certain media types which are acceptable for the response.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept-Charset</strong></h5>
+                        <hr>
+                        <p>The Accept-Charset request-header field can be used to indicate what character sets are acceptable for the response.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept-Encoding</strong></h5>
+                        <hr>
+                        <p>The Accept-Encoding request-header field is similar to Accept, but restricts the content-codings (section 3.5) that are acceptable in the response.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept-Language</strong></h5>
+                        <hr>
+                        <p>The Accept-Language request-header field is similar to Accept, but restricts the set of natural languages that are preferred as a response to the request.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept-Ranges</strong></h5>
+                        <hr>
+                        <p>The Accept-Ranges header field allows the server to indicate its acceptance of range requests for a resource.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Authorization</strong></h5>
+                        <hr>
+                        <p>The Authorization field value consists of credentials containing the authentication information of the user agent for the realm of the resource being requested.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content-Range</strong></h5>
+                        <hr>
+                        <p>The Content-Range header is sent with a partial entity-body to specify where in the full entity-body the partial body should be applied.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Expect</strong></h5>
+                        <hr>
+                        <p>The Expect request-header field is used to indicate that particular server behaviors are required by the client.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>From</strong></h5>
+                        <hr>
+                        <p>The From request-header field, if given, SHOULD contain an Internet e-mail address for the human user who controls the requesting user agent.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Host</strong></h5>
+                        <hr>
+                        <p>The Host request-header field specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>If-Match</strong></h5>
+                        <hr>
+                        <p>The If-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that one of those entities is current by including a list of their associated entity tags in the If-Match header field.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>If-Modified-Since</strong></h5>
+                        <hr>
+                        <p>The If-Modified-Since request-header field is used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>If-None-Match</strong></h5>
+                        <hr>
+                        <p>The If-None-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify that none of those entities is current by including a list of their associated entity tags in the If-None-Match header field. The purpose of this feature is to allow efficient updates of cached information with a minimum amount of transaction overhead. It is also used to prevent a method (e.g. PUT) from inadvertently modifying an existing resource when the client believes that the resource does not exist.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>If-Range</strong></h5>
+                        <hr>
+                        <p>If a client has a partial copy of an entity in its cache, and wishes to have an up-to-date copy of the entire entity in its cache, it could use the Range request-header with a conditional GET.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>If-Unmodified-Since</strong></h5>
+                        <hr>
+                        <p>The If-Unmodified-Since request-header field is used with a method to make it conditional. If the requested resource has not been modified since the time specified in this field, the server SHOULD perform the requested operation as if the If-Unmodified-Since header were not present.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Max-Forwards</strong></h5>
+                        <hr>
+                        <p>The Max-Forwards request-header field provides a mechanism with the TRACE and OPTIONS methods to limit the number of proxies or gateways that can forward the request to the next inbound server. This can be useful when the client is attempting to trace a request chain which appears to be failing or looping in mid-chain.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Proxy-Authorization</strong></h5>
+                        <hr>
+                        <p>The Proxy-Authorization request-header field allows the client to identify itself (or its user) to a proxy which requires authentication. The Proxy-Authorization field value consists of credentials containing the authentication information of the user agent for the proxy and/or realm of the resource being requested.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Range</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Referer</strong></h5>
+                        <hr>
+                        <p>The Referer[sic] request-header field allows the client to specify, for the server's benefit, the address (URI) of the resource from which the Request-URI was obtained (the "referrer", although the header field is misspelled.) The Referer request-header allows a server to generate lists of back-links to resources for interest, logging, optimized caching, etc. It also allows obsolete or mistyped links to be traced for maintenance. The Referer field MUST NOT be sent if the Request-URI was obtained from a source that does not have its own URI, such as input from the user keyboard.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>TE</strong></h5>
+                        <hr>
+                        <p>The TE request-header field indicates what extension transfer-codings it is willing to accept in the response and whether or not it is willing to accept trailer fields in a chunked transfer-coding. Its value may consist of the keyword "trailers" and/or a comma-separated list of extension transfer-coding names with optional accept parameters.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>User-Agent</strong></h5>
+                        <hr>
+                        <p>The User-Agent request-header field contains information about the user agent originating the request.</p>
+                    </div>
+                </div>
+                <div class="mh-container" id="response">
+                    <div class="net mh">
+                        <strong>Response Header Fields</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Accept</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Age</strong></h5>
+                        <hr>
+                        <p>It conveys the sender's estimate of the amount of time since the response (or its revalidation) was generated at the origin server.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>ETag</strong></h5>
+                        <hr>
+                        <p>Short for Entity Tag, is a tag for the entity.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Location</strong></h5>
+                        <hr>
+                        <p>Used for redirection.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Proxy Authenticate</strong></h5>
+                        <hr>
+                        <p>This field MUST be included as part of a 407 (Proxy Authentication Required) response.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Retry-After</strong></h5>
+                        <hr>
+                        <p>Tell the client that service currently not available.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Server</strong></h5>
+                        <hr>
+                        <p>Not a required header.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Vary</strong></h5>
+                        <hr>
+                        <p>Server can tell to change value.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>WWW-Authenticate</strong></h5>
+                        <hr>
+                        <p>This response-header field MUST be included in 401 (Unauthorized) response messages.</p>
+                    </div>
+                </div>
+                <div class="mh-container" id="entity">
+                    <div class="net mh">
+                        <strong>Entity Header Fields</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Allow</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Encoding</strong></h5>
+                        <hr>
+                        <p>This entity-header field is used as a modifier to the media-type.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Language</strong></h5>
+                        <hr>
+                        <p>Reader; good for accessibility.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Length</strong></h5>
+                        <hr>
+                        <p>This entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Location</strong></h5>
+                        <hr>
+                        <p>Content is being somewhere else.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content MD5</strong></h5>
+                        <hr>
+                        <p>Hashing algorithm; change data and hash.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Range</strong></h5>
+                        <hr>
+                        <p>Doing range request.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Content Type</strong></h5>
+                        <hr>
+                        <p>Specify what content enclosing in message.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Expires</strong></h5>
+                        <hr>
+                        <p>This entity-header field gives the date/time after which the response is considered stale.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Last-Modified</strong></h5>
+                        <hr>
+                        <p>This entity-header field indicates the date and time at which the origin server believes the variant was last modified.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
+                    <hr>
+                    <p>References:</p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.10">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.10</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="jsjquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
 </html>
