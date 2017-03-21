@@ -1,81 +1,149 @@
-<!DOCTYPE HTML>
-	<html>
-	  <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
-	                <li><a href ="lecture 6.html">Lecture 6</a></li>
-	                <li><a href ="lecture 7.html">Lecture 7</a></li>
-	                <li><a href ="lecture 8.html">Lecture 8</a></li> 
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-	      
-	      
-<div class="lecture lecture5" id = "lecture5">
-	<h1>LESSON 5: HTTP Response Message</h1>
-	<ul>
-	<li> Status Line (CRLF terminated line consisting of three space-separated values)</li>
-      <ul>
-	  <p>HTTP Protocol version</p>
-          <li>Status Code</li>
-              <p>- a 3-digit integer result code to understand and satisfy request. </p>
-          <li>Reason Phrase</li>
-              <p>- descriptive representation of status code. </p>
-	  <li>Response Header Fields</li> 
-	      <p>- allow the server to pass additional information about the response which cannot be placed in the Status- Line. </p>
-</ul>
-<ul>
-<strong> Accept-Ranges </strong>
-<p> allows the server to indicate its acceptance of range requests for a resource </p>
-<strong> Age </strong>
-<p> estimate the sender's amount of time since the response </p>
-<strong> Etag </strong>
-<p> provides the current value of the entity tag for the requested variant </p>
-<strong> Location </strong>
-<p> used to redirect the recipient to a location </p>
-<strong> Proxy-Authenticate </strong>
-<p> consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy </p>
-<strong> Retry-After </strong>
-<p> indicate how long the service is expected to be unavailable </p>
-<strong> Server </strong>
-<p> contains information about the software used by the origin server to handle the request </p>
-<strong> Vary </strong>
-<p> indicates the set of request-header fields that fully determines, while the response is fresh </p>
-<strong> WWW-Authenticate </strong>
-<p> consists of at least one challenge that indicates the authentication schemes and parameters </p>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
 
-        <li>Message Headers </li>
-<p> - general, client request and/or entity headers </p>
-	<li>Empty Line</li>
-<p> -  a line with nothing preceding the CRLF </p>
-        <li>Message Body </li>
-<p> -  optional ; used to carry the entity-body associated with the request or response </p>
-	<li>Message Length </li>
-<p> - message-body length that appears in the message </p>
-<p> <strong> Transfer-Encoding header field </strong> - is present and has any value other than "identity", then the transfer-length is defined by use of the "chunked" transfer-coding. </p>
-<p> <strong> Content-Length header field </strong> - is present, its decimal value in OCTETs represents both the entity-length and the transfer-length. </p>
-	<li>General Header Fields </li>
-<p> - only applied to message that is being transmitted. </p>
-</ul>
-	</div>
-<footer> 
-<p> <strong> References </strong> </p> 
-<p> https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html </p>
-<p> https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html </p>
-<p> https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.6 </p>
-</footer>
-	    
-	    </body>
-	</html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HTTP Response Message</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="lecture5.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Midterm</a></li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#httprpm">HTTP Response Message</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="httprpm">HTTP Response Message</h1>
+
+                <div class="rpm-con">
+                    <div class="net rpm">
+                        <strong>HTTP Response Message</strong>
+                    </div>
+                    <ul class="rpm-definition">
+                        <li> Status Line (CRLF terminated line consisting of three space-separated values)</li>
+                        <ul>
+                            <p>HTTP Protocol version</p>
+                            <li>Status Code</li>
+                            <p>- a 3-digit integer result code to understand and satisfy request. </p>
+                            <li>Reason Phrase</li>
+                            <p>- descriptive representation of status code. </p>
+                            <li>Response Header Fields</li>
+                            <p>- allow the server to pass additional information about the response which cannot be placed in the Status- Line. </p>
+                        </ul>
+                        <ul>
+                            <strong> Accept-Ranges </strong>
+                            <p> allows the server to indicate its acceptance of range requests for a resource </p>
+                            <strong> Age </strong>
+                            <p> estimate the sender's amount of time since the response </p>
+                            <strong> Etag </strong>
+                            <p> provides the current value of the entity tag for the requested variant </p>
+                            <strong> Location </strong>
+                            <p> used to redirect the recipient to a location </p>
+                            <strong> Proxy-Authenticate </strong>
+                            <p> consists of a challenge that indicates the authentication scheme and parameters applicable to the proxy </p>
+                            <strong> Retry-After </strong>
+                            <p> indicate how long the service is expected to be unavailable </p>
+                            <strong> Server </strong>
+                            <p> contains information about the software used by the origin server to handle the request </p>
+                            <strong> Vary </strong>
+                            <p> indicates the set of request-header fields that fully determines, while the response is fresh </p>
+                            <strong> WWW-Authenticate </strong>
+                            <p> consists of at least one challenge that indicates the authentication schemes and parameters </p>
+                        </ul>
+
+                        <li>Message Headers </li>
+                        <p> - general, client request and/or entity headers </p>
+                        <li>Empty Line</li>
+                        <p> - a line with nothing preceding the CRLF </p>
+                        <li>Message Body </li>
+                        <p> - optional ; used to carry the entity-body associated with the request or response </p>
+                        <li>Message Length </li>
+                        <p> - message-body length that appears in the message </p>
+                        <p> <strong> Transfer-Encoding header field </strong> - is present and has any value other than "identity", then the transfer-length is defined by use of the "chunked" transfer-coding. </p>
+                        <p> <strong> Content-Length header field </strong> - is present, its decimal value in OCTETs represents both the entity-length and the transfer-length. </p>
+                        <li>General Header Fields </li>
+                        <p> - only applied to message that is being transmitted. </p>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
+                    <hr>
+                    <p>References:</p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html</a></p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html</a></p>
+                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.6">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.6</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
