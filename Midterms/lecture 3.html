@@ -22,79 +22,112 @@
 	        </ul>
 	      </nav>
 	      
-	<div class="lecture lecture 3" id = "lecture 3">
-            <h1>Lecture 3: Selector Syntax </h1>
-<p> - sequences at simple selectors separated by combinators w/ one pseudo-element possibly appended. </p>
+	<div class="lecture lecture 4" id = "lecture 4">
+            <h1>Lecture 4: CSS Selector Syntax </h1>
+		
+	<ul> 
+	<li>Selector</li> <ul>
+	<li> Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule declaration block. 
+	The matched elements are called the subjects of the selector. </li> </ul>
+	
+	<li>Selector-syntax</li> <ul>
+	<li> Chain of one or more sequences of simple selectors separated by 
+	combinators with one pseudo-element possibly appended to the last sequence. </li> </ul>
+	
+	<li> Sequence of Simple Selectors </li> <ul>
+	<li> Chain of simple selectors not separated by combinators </li>
+	<li> Always starts with a type selector or a universal selector </li>
+	<li> Cannot contain other type selectors or universal selectors </li> </ul>
+	
+	<li>Group of Selectors </li> <ul>
+	<li> Comma-separated list of selectors representing 
+	the union of all elements selected by each of the selectors in the list </li> 
+	<ul>
+	<li> Simple Selectors </li> 
+	<ul>
+	<li> Type selector - type of targeting elements </li>
+	<li> Universal selector - represented by an asterisk (*) </li>
+	<li> Attribute selector </li>
+	<ul>
+	<li> [attr] </li>
+	<li> [attr = value] </li>
+	<li> [attr == value] </li>
+	<li> [attrl = value] </li>
+	<li> [attr^ = value] </li>
+	<li> [attr$ = value] </li>
+	<li> [attr* = value] </li> </ul>
+	</ul>
+	<li> Class Selector - represented by a period </li>
+	<li> ID Selector - pound sign </li>
+	<li> Pseudo-class </li> 
+	<ul>
+	<li> Implicit class that is associated with the inherited classes or mark up </li>
+	<ul> <li> Dynamic pseudo class </li> 
+	<ul> <li> link psuedo-classes </li> 
+	<ul>
+	<li> :link </li>
+	<li> :visited </li> </ul>
+	</ul>
+	<li> User action pseudo-classes </li> 
+	<ul>
+	<li> :hover - roll over effect </li>
+	<li> :active - activate a particular element by clicking a button </li>
+	<li> :focus - form many input element </li> 
+	</ul>
+	<li> Target pseudo-class </li>
+	<ul>
+	<li> :target </li>
+	</ul>
+	<li> Language pseudo-class </li>
+	<ul>
+	<li> :lang() </li>
+	</ul>
+	<li> UI element states pseudo-classes </li>
+	<ul>
+	<li> :enabled </li>
+	<li> :disabled </li>
+	<li> :checked </li>
+	<li> :indeterminate </li>
+	</ul>
+	<li> Structural pseudo-classes </li>
+	<ul>
+	<li> :root </li>
+	<li> :first-child </li>
+	<li> :last-child </li>
+	<li> :only-child </li>
+	<li> :nth-child()</li>
+	<li> :nth-last-child </li>
+	<li> :first-of-type </li>
+	<li> :last-of-type </li>
+	<li> :only-of-type </li>
+	<li> :nth-of-type() </li>
+	<li> :nth-last-of-type() </li>
+	<li> :empty </li>
+	</ul>
+	<li> Negation pseudo-class </li>
+	<ul>
+	<li>:not() - negates the logic of a selector </li>
+	</ul>
+	<li> Combinators </li>
+	<ul>
+	<li> descendant combinator (whitespace, i.e space, tab, linefeed, carriage return, form feed) </li>
+	<ul>
+	<li> child combinator (>) direct/immediate descendant </li>
+	<li> sibling combinators (same parent) </li>
+	<ul>
+	<li> adjacent sibling combinator (+) </li>
+	<li> general sibling combinator (~) </li>
+	</ul>
+	</ul>
+	</ul> <li> Pseudo-elements </li> 
+	<ul>
+	<li> ::first-letter - :first-letter </li>
+	<li> ::first-line - :first-line </li>
+	<li> ::before - :before </li>
+	<li> ::after - :after </li></ul>
 
-<h3> Simple Selectors </h3>
-<ul>
-<li> type selector </li>
-<li> universal selector </li>
-<li> attribute selector </li>
-<ul>
-<li> [attr] </li>
-<li> [attr = value] </li>
-<li> [attr == value] </li>
-<li> [attrl = value] </li>
-<li> [attr^ = value] </li>
-<li> [attr$ = value] </li>
-<li> [attr* = value] </li>
-</ul>
-<li> class selector </li>
-<li> ID selector </li>
-</ul>
 
-<h3> Pseudo-class </h3>
-<ul>
-<li> dynamic pseudo-class </li>
-<p> link psuedo-classes </p>
-<ul>
-<li> :link </li>
-<li> :visited </li>
-</ul>
-<p> user action pseudo-classes </p>
-<ul>
-<li> :hover </li>
-<li> :active </li>
-<li> :focus </li>
-</ul>
-<p> target pseudo-class </p>
-<ul>
-<li> :target </li>
-</ul>
-<p> language pseudo-class </p>
-<ul>
-<li> </li>
-</ul>
-<p> UI element states pseudo-classes </p>
-<ul>
-<li> </li>
-</ul>
-<p> Structural pseudo-classes </p>
-<ul>
-<li> </li>
-</ul>
-<p> negation pseudo-class </p>
-<ul>
-<li> </li>
-</ul>
-<p> combinators </p>
-<ul>
-<li> descendant combinator (whitespace, i.e space, tab, linefeed, carriage return, form feed) </li>
-<li> child combinator (>) direct/immediate descendant </li>
-<li> sibling combinators (same parent)
-<ul>
-<li> adjacent sibling combinator (+) </li>
-<li> general sibling combinator (~) </li>
-</ul>
-</ul>
-<p> pseudo-elements </p>
-<ul>
-<li> </li>
-</ul>
-</ul>
+	</div>
+	</body>
 
-          		</div>
-</body>
-    
-</html>
+	</html>
