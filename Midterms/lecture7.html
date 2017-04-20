@@ -23,8 +23,85 @@
 	      </nav>
         <div class="lecture lecture 7" id = "lecture 7">
             <h1>Lecture 7: Javascript </h1>
-            
-            
+		<p> C based </p>
+
+<ul>
+<li> Standard ECMA - 262 : 7th edition (June 2016) </li>
+<li> ECMA Script 5 - almost full support </li>
+</ul>
+
+<ul>
+<li> Externally Linked Script </li>
+<ul>
+<li> <script type = 'text/javascript' src = 'script.js'> </script> </li>
+<li> console.log ('externally linked script...'); </li>
+</ul>
+<li> Embedded Script </li>
+<p> console.log('embedded script...');
+   function callMe(){
+	console.log ("you called me...");
+}
+</p>
+<li> Inline Script </li>
+<ul>
+<li> <button onclick = 'console.log("inline script...");'> Click Me </button> </li>
+</ul>
+</ul>
+
+<h3> ELS </h3>
+<ul>
+<li> defer attribute - fetch script, render blocking, script execute </li>
+<li> async attribute - asyncronous loading : fetch script, continue rendering, can execute </li>
+</ul>
+
+<h3> document object = html </h3>
+<p> getElementId(Id value) </p>
+<ul>
+<li> innertext property - treated not as mark up </li>
+<li> inner html - interpret any mark up put on/in a value </li>
+<li> outertext property </li>
+<li> outerhtml </li>
+</ul>
+
+<h3> dot Notation Syntax </h3>
+<ul>
+<li> h.title </li>
+<li> h['title'] </li>
+<li> h.style </li>
+<li> h.style.color = 'red' </li>
+<li> h.style.fontSize = '2 em' </li>
+<li> h.style.backgroundColor = "" </li>
+<li> h.className </li>
+<li> h.setAttribute('data-extra' 'vale' ) </li>
+<li> h.getAttribute </li>
+</ul>
+
+<ul>
+<li> getElementById ('s') - can be retrieved called by document object </li>
+<li> getElementsByTagName ('p') - retrieving </li>
+<li> querySelector - allow specify CSS selector </li>
+</ul>
+
+<ul>
+<li> document.childNodes </li>
+<li> document.children </li>
+<li> document.head.childNodes </li>
+<li> document.head.children </li>
+<li> document.childElementCount </li>
+<li> document.hasChildren </li>
+<li> document.firstChild </li>
+<li> document.firstElementChild </li>
+<li> document.lastChild </li>
+<li> document.lastElementChild </li>
+<li> document.nextSibling </li>
+<li> document.body.children[3] </li>
+<li> document.body.firstChild.nextElementSibling </li>
+<li> document.body.firstChild.nextSibling </li>
+<li> document.body.firstChild.previousElementSibling </li>
+<li> document.body.firstChild.previousSibling </li>
+<li> document.parentElement </li>
+<li> document.parentNode </li>
+</ul>  
         
         </div>
 </body>
