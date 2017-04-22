@@ -22,40 +22,54 @@
 	        </ul>
 	      </nav>
         <div class="lecture lecture 7" id = "lecture 7">
-            <h1>Lecture 7: Javascript </h1>
-		<p> C based </p>
-
+            <h1>Lecture 7: Client Side Scripting </h1>
+		<p> Javascript - create a script then associate it with a webpage </p>
+		<ul>
+		<li> Use dynamic typing </li>
+		<li> Not strongly type </li>
+		<li> like java and c++, one declaration </li>
+		<li> de facto language of the Web, imperative language </li>
+		
+		<p> Document Object Model - describes the structures of mark-up</p>
+	
 <ul>
 <li> Standard ECMA - 262 : 7th edition (June 2016) </li>
 <li> ECMA Script 5 - almost full support </li>
 </ul>
 
 <ul>
-<li> Externally Linked Script </li>
+<li> Externally or Linked Script </li>
 <ul>
-<li> <script type = 'text/javascript' src = 'script.js'> </script> </li>
-<li> console.log ('externally linked script...'); </li>
+<li> < script type = 'text/javascript' src = 'script.js' > < / script > </li>
+<li> console.log ('externally linked script...'); </li> 
+<ul> 
+<li> Attribute </li> </ul>
+<ul>
+<li> Defer – do thing in parallel (wait until the document is rendered)
+< script defer type = ‘text/javascript’ src = ‘script.js’ > < / script > </li>
+<li> Async – for asynchronous loading (don’t wait until it finish executing)
+< script async type = ‘text/javascript’ src=’script.js’ > < / script > </li> </ul>
+
+
 </ul>
 <li> Embedded Script </li>
-<p> console.log('embedded script...');
+<li> < script > console.log('embedded script...');
    function callMe(){
-	console.log ("you called me...");
-}
-</p>
+	console.log ("you called me..."); < / script >
+}</li>
 <li> Inline Script </li>
 <ul>
-<li> <button onclick = 'console.log("inline script...");'> Click Me </button> </li>
-</ul>
+<li> < button onclick = 'console.log("inline script...");'> Click Me < / button> </li>
 </ul>
 
-<h3> ELS </h3>
+<li> Global Objects </li>
 <ul>
-<li> defer attribute - fetch script, render blocking, script execute </li>
-<li> async attribute - asyncronous loading : fetch script, continue rendering, can execute </li>
+<li>window.navigator </li>
+<li>window.vendor </li>
+<li>window.document </li>
+<li>window.getElementByID</li> </ul>
 </ul>
 
-<h3> document object = html </h3>
-<p> getElementId(Id value) </p>
 <ul>
 <li> innertext property - treated not as mark up </li>
 <li> inner html - interpret any mark up put on/in a value </li>
@@ -65,21 +79,30 @@
 
 <h3> dot Notation Syntax </h3>
 <ul>
+<li> h.textcontent </li>
+<li> h.innerHtml </li>
+<li> h.outerText </li>
+<li> h.outerHtml </li>
+<li> h.innerText </li>
 <li> h.title </li>
+<li> h.lang </li>
 <li> h['title'] </li>
 <li> h.style </li>
 <li> h.style.color = 'red' </li>
 <li> h.style.fontSize = '2 em' </li>
 <li> h.style.backgroundColor = "" </li>
 <li> h.className </li>
-<li> h.setAttribute('data-extra' 'vale' ) </li>
+<li> h.setAttribute('data-extra' 'value' ) </li>
 <li> h.getAttribute </li>
 </ul>
 
 <ul>
-<li> getElementById ('s') - can be retrieved called by document object </li>
-<li> getElementsByTagName ('p') - retrieving </li>
-<li> querySelector - allow specify CSS selector </li>
+<li> document.getElementById ('s') - can be retrieved called by document object </li>
+<li> document.getElementsByTagName ('p') - retrieving </li>
+<li> document.getElementByTagName
+<li> document.getElements
+<li> document.querySelector - allow specify CSS selector </li>
+<li> document.querySelectorAll  </li>
 </ul>
 
 <ul>
@@ -102,6 +125,22 @@
 <li> document.parentElement </li>
 <li> document.parentNode </li>
 </ul>  
+
+<ul>
+<li>window.navigator.vendor </li>
+<li>window.screen.height </li>
+<li>window.document</li>
+<li>p.textcontent</li>
+<li>p.querySelector</li>
+</ul>
+
+<h3> Features of Ecma Script 2016 </h3>
+<p>  3 keywords </p>
+<ul>
+<li> VAR </li>
+<li> LET </li>
+<li> CONST </li>
+
         
         </div>
 </body>
