@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Hypertext Transfer Protocol (HTTP)</title>
+    <title>Cascading Style Sheets (CSS)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="lecture2.css" rel="stylesheet">
+    <link href="style/lecture1.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
 
@@ -46,7 +46,14 @@
                             <li><a href="lecture%208.html">HTTP Status Codes</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Midterm</a></li>
+
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Midterm<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Hypertext Markup Language (HTML)</a></li>
+                            <li><a href="lecture%202.html">Cascading Style Sheets (CSS)</a></li>
+                            <li><a href="lecture%203.html">Javascript (JS)</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Final</a></li>
                 </ul>
             </div>
@@ -57,118 +64,467 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#httptp">HTTP</a></li>
-                    <li><a href="#fundamentals">HTTP Fundamentals</a></li>
+                    <li class="active"><a href="#history">CSS History</a></li>
+                    <li><a href="#cssprep">CSS Preprocessors</a></li>
+                    <li><a href="#htmlprep">HTML Preprocessors</a></li>
+                    <li><a href="#xhtml">HTML/XHTML Stylesheets</a></li>
+                    <li><a href="#statement">CSS Statements</a></li>
+                    <li><a href="#rule">CSS Rule Sets</a></li>
+                    <li><a href="#selector">CSS Selectors</a></li>
+                    <li><a href="#precedence">CSS Rules of Precedence</a></li>
+                    <li><a href="#declaration">CSS Declarations</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header" id="httptp">Hypertext Transfer Protocol (HTTP)</h1>
+                <h1 class="page-header" id="history">Cascading Style Sheets (CSS)</h1>
 
-                <div class="http-con">
-                    <div class="net http">
-                        <strong>HTTP</strong>
+                <div class="mh-con">
+                    <div class="net mh">
+                        <strong>CSS History</strong>
                     </div>
-                    <ul class="http-definition">
-                        <li>application layer communications protocol used to access resources (hypertext/hypermedia) on the World Wide Web.</li>
-                        <li>invented by <a href=https://www.w3.org/People/Berners-Lee>Tim Berners-Lee </a></li>
-                        <li>jointly developed by the <a href=https://www.w3.org>W3C</a> and the <a href=https://www.ietf.org>IETF</a></li>
-                        <li>version history :
-                            <ul>
-                                <li> <a href=https://www.w3.org/Protocols/HTTP/AsImplemented.html> HTTP 0.9 (1991</a></li>   
-                                <li> <a href=https://tools.ietf.org/html/rfc1945>HTTP 1.0 (RFC 1945, May 1996)</a></li>
-                                <li> <a href=https://www.ietf.org/rfc/rfc2068.txt>HTTP 1.1 (RFC 2068 Jan 1997, RFC 2116 Jun 1999), RFC 7230 - 7235 (Jun 2014)</a></li>
-                                <li> <a href=https://tools.ietf.org/html/rfc7540>HTTP 2 (RFC 7540 May 2015) </a> </li>                      
-                            </ul>
-                        </li>
-                    </ul>
-                    <hr>
-                </div>
-                <div class="http-container" id="fundamentals">
-                    <div class="net http">
-                        <strong>HTTP Fundamentals</strong>
+                    <div class="fields">
+                        <p>Cascading Style Sheet (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents.</p> 
+                        <hr>
                     </div>
-                    <ul class="http-definition">
-                        <li>HTTP runs on top of TCP/IP, using TCP port 80 by default or TCP port 443 for HTPPS (over SSL/TLS)</li>
-                        <li>HTTP is based on a client - server architecture
-                            <ul>
-                                <li>Client, a.k.a. user agents (UA) : request resources from server.
-                                    <li> Web Client : ex. web browsers such as Chrome, Edge, Firefox .. Web crawlers/spiders : ex. googlebot of Chrome
-                                        <li> http Client : ex. applications in mobile
-                                            <ul>
-                                                <li>web browser, web crawlers/spider, other end user tools and applications</li>
-                                            </ul>
-                                        </li>
-                                        <li>Servers :
-                                            <ul>
-                                                <li>Origin Server - web resources are physically there. - a machine with application running through web.</li>
-                                                <li>Proxy Servers (to authenticate), gateways, tunnels (blind relay)</li>
-                                            </ul>
-                                        </li>
-                            </ul>
+                    <div class="fields">
+                        <h5><strong>Time Table</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>October 1994: Hakon Wium Lie released the first draft of "Cascading HTML Style Sheets"</li>
+                            <li>May 1995: The discussions on the www-style mailing list</li>
+                            <li>August 1996: Microsoft Internet Explorer became the first browser to support CSS.</li>
+                            <li>December 1996: The CSS Level 1 W3C Recommendation was made
+                            <li>The release of CSS 1 supported:</li>
+                                <ul> 
+                                    <li>font properties</li>
+                                    <li>text attributes</li>
+                                    <li>alignment of text</li>
+                                    <li>tables</li>
+                                    <li>images and more</li>
+                                    <li>colors of text and backgrounds</li>
+                                    <li>spacing of words</li>
+                                    <li>letters and lines</li>
+                                    <li>margins</li>
+                                    <li>borders</li>
+                                    <li>padding and positioning</li>
+                                    <li>and unique identification and classification of groups of attributes</li>
+                                </ul>               
                             </li>
-                            <li>HTTP uses a request-response standard protocol
-                                <ul>
-                                    <li>the clients sends an HTTP request message to the server</li>
-                                    <li>the server processes the request and replies with an HTTP response message * pull, polling (check server ; refreshing)</li>
-                                    <li> STATELESS </li>
-                                    <li> figures what clients want to do but soon forgets client (save and forget)
-                                        <li> MIME </li>
-                                        <li> Multipurpose Internet Mail Extensions ex. (file/format) : txt/html , img/png
+                            <li>May 1998: the W3C released CSS 2 which added new capabilities including z-index, media 
+                                          types, bidirectional text, absolute, relative and fixed positioning, and support 
+                                          for aural style sheets.</li>
+                            <li>Between June 2011 and June 2012: the following four modules were released as formal recommendations:
+                                          color, selectors level 3, namespaces and media queries.</li>
+                        </ul>              
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Versions</strong></h5>
+                        <hr>
+                        <p>CSS 1 (December 17 1996)</p>
+                        <p>CSS 2.1 (Ian Hickson, monolithic specification or one stop shop)</p>
+                        <p>CSS 3 (new addition such as media queries (mobiles), animations, transforms)</p>
+                    </div>
+                </div>
+                <div class="mh-container" id="cssprep">
+                    <div class="net mh">
+                        <strong>CSS Preprocessors</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>SASS</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>LESS</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>960 Grid System</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Boostrap Foundation</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Materialize</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                </div>    
 
+                <div class="mh-container" id="htmlprep">
+                    <div class="net mh">
+                        <strong>HTML Preprocessors</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Markdown</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Slim</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Pug</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>HAML</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="xhtml">
+                    <div class="net mh">
+                        <strong>HTML/XHTML Stylesheets</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Author Styles</strong></h5>
+                        <hr>
+                        <p>Styles that the author planned.</p>
+                        <p>External Stylesheets (recommended)</p>
+                        <pre>   
+    &lthead&gt
+        &ltlink rel = "stylesheet" type = "text/css" href = "styles/main.css"&gt
+    &lt/head&gt
+                        </pre>
+                        <p>Embedded Styles</p>
+                        <pre>   
+    &lthead&gt
+        style rel = "stylesheet" type = "text/css" href = "styles/main.css"
+        /style&gt
+    &lt/head&gt
+                        </pre>
+                        <p>Inline Styles</p>
+                        <pre>   
+    &ltp style = "border: 1px solid green; color: blue;"&gt
+        This is a paragraph.
+    &lt/p&gt    
+                        </pre>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>User Styles</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>User-agent styles</strong></h5>
+                        <hr>
+                        <p>Default style specification of browsers (example default CSS 2.1 stylesheet for HTML 4).</p>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="statement">
+                    <div class="net mh">
+                        <strong>CSS Statements</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>At - Rules</strong></h5>
+                        <hr>
+                        <p>@ Charset</p>
+                        <p>@ Import</p>
+                        <p>@ Page</p>
+                        <p>@ Namesapce</p>
+                        <p>@ Document</p>
+                        <p>@ Font-face</p>
+                        <p>@ Keyframes</p>
+                        <p>@ Media</p>
+                        <p>@ Page</p>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="rule">
+                    <div class="net mh">
+                        <strong>CSS Rule Sets</strong>
+                    </div>
+                    <div class="fields">
+                        <p>Consist of a selector followed by a brace enclosed declaration block, which contains zero.</p>
+                        <hr>
+                        <pre>
+    /* Comment */
+    p {
+        color: green;
+    }
+    // Invalid Comment
+                        </pre>
+                        <p>p - selector</p>
+                        <p>{} - declaration block</p>
+                        <p>: - property separator</p>
+                        <p>color - property name</p>
+                        <p>green - property value</p>
+                        <p>/* or */ - comment</p>
+                        <p>// - invalid comment</p>
+                    </div>
+                </div>
+                <div class="mh-container" id="selector">
+                    <div class="net mh">
+                        <strong>CSS Selectors</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Selector</strong></h5>
+                        <hr>
+                        <p>Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule declaration block. 
+    The matched elements are called the subjects of the selector.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Selector Syntax</strong></h5>
+                        <hr>
+                        <p>Chain of one or more sequences of simple selectors separated by 
+    combinators (>, +) with one pseudo-element possibly appended to the last sequence.</p>
+                        <pre>div#abc>p.xyz[title]­+span:last-of-type::­after
+    
+    div             - type selector
+    #abc            - ID Selector
+    >               - Combinators
+    p               - paragraph (type)
+    .xyz            - class selector
+    +               - adjacent
+    span            - type selector
+    :last-of-type   - pseudo class
+    ::after         - pseudo element
+                        </pre>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Sequence of Simple Selectors</strong></h5>
+                        <hr>
+                        <p>Chain of simple selectors not separated by combinators.</p>
+                        <p>Always starts with a type selector or a universal selector.</p>
+                        <p>Cannot contain other type selectors or universal selectors.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Group of Selectors</strong></h5>
+                        <hr>
+                        <p>Comma-separated list of selectors representing 
+    the union of all elements selected by each of the selectors in the list. </p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Simple Selectors</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>Type selector - type of targeting elements</li>
+                            <pre>
+    p {         
+        font-size: 16px;
+    }
+                            </pre>
+                            <li>Universal selector - represented by an asterisk (*)</li>
+                            <pre>
+    * {
+        padding-top: 50px;
+    }
+                            </pre>
+                            <li>Attribute selector</li>
+                                <ul>
+                                    <li> [attr] </li>
+                                    <li> [attr = value] </li>
+                                    <li> [attr == value] </li>
+                                    <li> [attrl = value] </li>
+                                    <li> [attr^ = value] </li>
+                                    <li> [attr$ = value] </li>
+                                    <li> [attr* = value] </li>
                                 </ul>
-                                </li>
-                                <li>HTTP is a stateless communications protocol
-                                    <ul>
-                                        <li>Servers do not keep information about clients in-between request</li>
-                                    </ul>
-                                </li>
-                                <li>HTTP provides support for other functionalities, such as :
-                                    <ul>
-                                        <li>cache control - general-header field is used to specify directives for caching mechanisms in both, requests and responses</li>
-                                        <li>control media type (MIME) specification - two-part identifier for file formats and format contents transmitted on the Internet. The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications
-                                        </li>
-                                        <li>language and character set specification - may appear at the beginning of the parameter value -Asterisks ("*") are reused to provide the indicator that language and character set information is present and encoding is being used. A single quote ("'") is used to delimit the character set and language information at the beginning of the parameter value. Percent signs ("%") are used as the encoding flag, which agrees with RFC 2047.</li>
-                                        <li>content/transfer coding - used to indicate the type of transformation that has been used in order to represent the body in an acceptable manner for transport. - designed to specify an invertible mapping between the "native" representation of a type of data and a representation that can be readily exchanged using 7 bit mail transport protocols, such as those defined by RFC 821 (SMTP).</li>
-                                        <li>content negotiation - the process of selecting the best representation for a given response when there are multiple representations available.
-                                        </li>
-                                        <li>client protocol negotiations - selection of the best representation for a response is performed by the user agent after receiving an initial response from the origin server.</li>
-                                        <li>server protocol negotiations - the selection of the best representation for a response is made by an algorithm located at the server</li>
-                                        <li>persistent connection - HTTP keep-alive, or HTTP connection reuse, is the idea of using a single TCP connection to send and receive multiple HTTP requests/responses, as opposed to opening a new connection for every single request/response pair.</li>
-                                        <li>request pipelining - is a technique in which multiple HTTP requests are sent on a single TCP connection without waiting for the corresponding responses.</li>
-                                        <li>authentication/authorization - the simplest technique for enforcing access controls to web resources because it doesn't require cookies, session identifiers, or login pages; rather, HTTP Basic authentication uses standard fields in the HTTP header, obviating the need for handshakes.</li>
-                                    </ul>
-                                </li>
-                    </ul>
+                            <li>Class Selector - represented by a period</li>
+                            <pre>
+    .x {
+        padding-right: 20px;
+    }
+                            </pre>
+                            <li>ID Selector - pound sign</li>
+                            <pre>
+    #a {
+        padding-left: 20px;
+    }
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Pseudo-class</strong></h5>
+                        <hr>
+                        <p>Implicit class that is associated with the inherited classes or mark up.</p>
+                        <ul>
+                            <li>Dynamic pseudo-class</li>
+                                <ul>
+                                    <li>Link psuedo-classes</li> 
+                                        <ul>
+                                            <li>:link </li>
+                                            <li>:visited </li> 
+                                        </ul>
+                                    <li>User action pseudo-class</li>
+                                        <ul>
+                                            <li>:target</li> 
+                                        </ul>     
+                                </ul>
+                            <li>User action pseudo-classes</li>
+                                <ul>
+                                    <li>:hover - roll over effect, mouse pointer hovers</li> 
+                                    <li>:active - activate a particular element by clicking a button</li>   
+                                    <li>:focus - form many input element, focus is moved </li> 
+                                </ul>
+                            <li>Target pseudo-class</li>
+                                <ul>
+                                    <li> :target - target element</li>
+                                </ul>
+                            <li>Language pseudo-class</li>
+                                <ul>
+                                    <li>:lang()</li>
+                                </ul>
+                            <li>UI element states pseudo-classes</li>
+                                <ul>
+                                    <li>:enabled </li>
+                                    <li>:disabled </li>
+                                    <li>:checked </li>
+                                    <li>:indetermined</li>
+                                </ul>
+                            <li>Structural pseudo-classes</li>
+                                <ul>
+                                    <li>:root</li>
+                                    <li>:first-child </li>
+                                    <li>:last-child </li>
+                                    <li>:only-child </li>
+                                    <li>:nth-child </li>
+                                    <li>:nth-child(an + b) </li> 
+                                    <li>:nth-last-child() </li> 
+                                    <li>:first-of-type </li>
+                                    <li>:last-of-type </li> 
+                                    <li>:only-of-type </li>
+                                    <li>:nth-of-type </li>
+                                    <li>:nth-last-of-type - count from the last child</li>
+                                    <li>:empty </li>
+                                </ul>
+                            <li>Negation pseudo-class</li>
+                                <ul>
+                                    <li>:not() - negates the logic of a selector</li>
+                                </ul>    
+                        </ul>    
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Combinators</strong></h5>
+                        <hr>
+                        <p>Descendant combinator (whitespace, i.e space, tab, linefeed, carriage return, form feed)</p>
+                        <ul>
+                            <li> child combinator (>) direct/immediate descendant </li>
+                            <li> sibling combinator (same parent) </li>
+                            <ul>
+                                <li> adjacent sibling combinator (+) </li>
+                                <li> general sibling combinator (~) </li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Pseudo-elements</strong></h5>
+                        <hr>
+                        <ul>
+                            <li> ::first-letter - :first-letter </li>
+                            <li> ::first-line - :first-line </li>
+                            <li> ::before - :before </li>
+                            <li> ::after - :after </li>
+                            <li> * counter-increment </li>
+                            <li> * counter-reset </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="precedence">
+                    <div class="net mh">
+                        <strong>CSS Rules of Precedence</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>By origin and importance</strong></h5>
+                        <hr>
+                        <ul>
+                            <li> user agent important declarations </li>
+                            <li> user important declarations </li>
+                            <li> author important declarations</li>
+                            <li> author normal declarations</li>
+                            <li> user normal declarations</li>
+                            <li> user agent normal declarations</li>
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>By specificity</strong></h5>
+                        <hr>
+                        <ul>
+                            <li> inline style </li>
+                            <li> number of id selectors</li>
+                            <li>number of class selectors, attribute selectors and pseudo classes</li>
+                            <li>number of type selectors and pseudo elements</li>
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>By order</strong></h5>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="declaration">
+                    <div class="net mh">
+                        <strong>CSS Declarations</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Properties</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>Shorthand properties (e.g background, font) and longhand properties (background)</li>
+                            <li>Vendor specific extenstions (a.k.a vendor prefixes)</li>
+                            <li>Experimental properties</li>
+                                <ul> 
+                                    <li> -webkit-transform-origin; </li>
+                                    <li> -moz-tranzform-origin; (Mozilla-ghetto) </li>
+                                    <li> -ms-transform-origin;(Edge) </li>
+                                    <li> -o-transform-transform-origin;(Opera-presto) </li> 
+                                </ul>
+                            <li>Global propterty keywords</li>
+                                <ul> 
+                                    <li> :inherit </li>
+                                    <li> :initial </li>
+                                    <li> :unset </li> 
+                                </ul>
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Values</strong></h5>
+                        <hr>
+                        <ul> 
+                            <li> Keywords </li>
+                            <li> Numbers </li>
+                            <li> Dimensions (numbers with units, length, angle, duration </li>
+                            <li> Length Units </li>
+                                <ul> 
+                                    <li> Font-relative - em, ex, ch, rem (root element) </li>
+                                    <li> Viewport-percentage- vw, vh, wmin, vmax </li>
+                                    <li> Absolute-lengths - cm, mm, q, in, pt, pc </li>
+                                    <li> Angle Units - deg, grad, rad, turn</li>
+                                    <li> Duration Units - s, ms (animation, transition) </li>
+                                    <li> Frequency Units - hz, khz </li>
+                                    <li> Resolution Units - dpi, apem, appy (media queries) </li> 
+                                </ul>
+                            <li> Percentages - number with a percent sign (%) </li>
+                            <li> URL's and URI's - URI function indicate resources that links </li>
+                            <li> Colors - counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate()
+                            <li> rgb, #, hsl (hue, saturation, light), rgba, hsla </li>
+                            <li> Functions - calc(), attr(), counter(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate(), etc. </li> 
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
-                    <hr>
-                    <p>References:</p>
-                    <p><a href="https://en.wikipedia.org/wiki/Basic_access_authentication">authentication - https://en.wikipedia.org/wiki/Basic_access_authentication</a></p>
-                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">cache control - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></p>
-                    <p><a href="https://en.wikipedia.org/wiki/Media_type">control media type specification - https://en.wikipedia.org/wiki/Media_type</a></p>
-                    <p><a href="https://tools.ietf.org/html/rfc2231">language and character set specification - https://tools.ietf.org/html/rfc2231</a></p>
-                    <p><a href="https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html">content/transfer coding - https://www.w3.org/Protocols/rfc1341/5_Content-Transfer-Encoding.html</a></p>
-                    <p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html">content negotiation/client protocol negotiation/server protocol negotiation - https://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html</a></p>
-                    <p><a href="https://en.wikipedia.org/wiki/HTTP_persistent_connection">persistent connection - https://en.wikipedia.org/wiki/HTTP_persistent_connection</a></p>
-                    <p><a href="https://en.wikipedia.org/wiki/HTTP_pipelining">request pipelining - https://en.wikipedia.org/wiki/HTTP_pipelining</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+        window.jQuery || document.write('<script src="jsjquery.min.js"><\/script>')
     </script>
     <script src="js/bootstrap.min.js"></script>
 
