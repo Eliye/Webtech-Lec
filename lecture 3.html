@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Hypertext Resource Addressing</title>
+    <title>JavaScript (JS)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="lecture3.css" rel="stylesheet">
+    <link href="style/lecture1.css" rel="stylesheet">
 
     <script src="js/ie-emulation-modes-warning.js"></script>
 
@@ -46,7 +46,14 @@
                             <li><a href="lecture%208.html">HTTP Status Codes</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Midterm</a></li>
+
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Midterm<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Hypertext Markup Language (HTML)</a></li>
+                            <li><a href="lecture%202.html">Cascading Style Sheets (CSS)</a></li>
+                            <li><a href="lecture%203.html">Javascript (JS)</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Final</a></li>
                 </ul>
             </div>
@@ -57,70 +64,419 @@
         <div class="row">
             <div class="col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#httpra">Hypertext Resource Addressing</a></li>
+                    <li class="active"><a href="#js">JS (Client Side Scripting)</a></li>
+                    <li><a href="#ways">Three ways to link javascript</a></li>
+                    <li><a href="#attributes">JS Attributes</a></li>
+                    <li><a href="#dot">DOT Notation Syntax</a></li>
+					<li><a href="#global">Global Objects</a></li>
+					<li><a href="#standard">Standard Objects</a></li>
+					<li><a href="#expression">Expressions and Operators</a></li>
+					<li><a href="#simple">Simple/Primitive Types</a></li>
+                    <li><a href="#feature">Features of Ecma Script 2016</a></li>
+					<li><a href="#array">JavaScript Arrays</a></li>
+					<li><a href="#method">JavaScript Arrays: Methods</a></li>
+					<li><a href="#object">JavaScript Arrays: Objects</a></li>
                 </ul>
             </div>
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header" id="httpra">Hypertext Resource Addressing</h1>
+                <h1 class="page-header" id="js">JavaScript (JS)</h1>
 
-                <div class="hra-con">
-                    <div class="net hra">
-                        <strong>Hypertext Resource Addressing</strong>
+                <div class="mh-con">
+                    <div class="net mh">
+                        <strong>JS (Client Side Scripting)</strong>
                     </div>
-                    <ul class="hra-definition">
-                        <li> HTTP resources are identified using URIs <a href=https://www.ietf.org/rfc/rfc3986.txt> (RFC 3986) </a> or more specifically, HTTP URLs.</li>
+                    
+                    <div class="fields">
+                        <hr>
                         <ul>
-                            <li>Scheme (http or https)</li>
-                            <li>Authority
-                                <ul>
-                                    <li>user information or authentication credentials (deprecated) </li>
-                                    <li>host
-                                        <ul>
-                                            <li>domain name (resolved to an IP address using <a href=https://en.wikipedia.org/wiki/Domain_Name_System>DNS(Domain Name System)</a> of the server where the resource resides (or will be created))
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>port number </li>
-
-                                </ul>
-                            </li>
-                            <li>Path to resource (resolved relative to the document root on the server)
-                                <ul>
-                                    <li>may refer to a static or dynamic resource</li>
-                                </ul>
-                            </li>
-
-                            <li>Query
-                                <ul>
-                                    <li>typically provided as key = value pairs, with ampersand (&) separators between key/value pairs</li>
-                                    <li>may be URL -encoded</li>
-                                </ul>
-
-                                <li>Fragment identifier</li>
-                                <ul>
-                                    <li>typically used in a browser's end </li>
-                                    <li>sometimes called "bookmark"</li>
-                                </ul>
+                            <li> Use dynamic typing </li>
+                            <li> Not strongly type </li>
+                            <li> like java and c++, one declaration </li>
+                            <li> de facto language of the Web, imperative language </li>
                         </ul>
-                    </ul>
-                    <hr>
+                        <ul>
+                            <li> Standard ECMA - 262 : 7th edition (June 2016) </li>
+                            <li> ECMA Script 5 - almost full support </li>
+                        </ul>
+                        <p> Document Object Model - describes the structures of mark-up</p>
+                    </div>
                 </div>
+				
+                <div class="mh-container" id="ways">
+                    <div class="net mh">
+                        <strong>Three ways to link a script</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Externally Linked Script (Recommended practice)</strong></h5>
+                        <hr>
+                        <pre>
+    &lthead&gt
+        &ltscript&gt &lt/script&gt
+    &lt/head&gt    
+                        </pre>
+                        <h5><strong>Embedded Script</strong></h5>
+                        <hr>
+                        <pre>
+    &ltbody&gt
+        &ltscript&gt &lt/script&gt
+    &lt/body&gt     
+                        </pre>
+                        <h5><strong>Inline Script</strong></h5>
+                        <hr>
+                        <pre>
+    &ltbutton onclick='console.log("inline script...");'&gt
+        Click Me
+    &lt/button&gt                       
+                        </pre>
+                    </div>
+                </div>
+                    
+                <div class="mh-container" id="attributes">
+                    <div class="net mh">
+                        <strong>JS Attributes</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Defer attribute</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>Fetch script, render blocking, script execute </li>
+                            <li>Block execution and continue execution after all are being rendered.</li>
+                        </ul>
+                        <pre>
+    &ltscript defer type = ‘text/javascript’ src = 'script.js'>
+    &lt/script&gt                     
+                        </pre>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>async attribute</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>Asyncronous loading : fetch script, continue rendering, can execute </li>
+                            <li>As soon as the script is available, it can already execute.</li>
+                        </ul>
+                        <pre>
+    &ltscript async type = ‘text/javascript’ src = 'script.js'>
+    &lt/script&gt                     
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="mh-container" id="dot">
+                    <div class="net mh">
+                        <strong>DOT Notation Syntax</strong>
+                    </div>
+                    <div class="fields">
+                        
+                        <ul>
+                            <li> h.textcontent </li>
+                            <li> h.innerHtml </li>
+                            <li> h.outerText </li>
+                            <li> h.outerHtml </li>
+                            <li> h.innerText </li>
+                            <li> h.title </li>
+                            <li> h.lang </li>
+                            <li> h['title'] </li>
+                            <li> h.style </li>
+                            <li> h.style.color = 'red' </li>
+                            <li> h.style.fontSize = '2 em' </li>
+                            <li> h.style.backgroundColor = "" </li>
+                            <li> h.className </li>
+                            <li> h.setAttribute('data-extra' 'value' ) </li>
+                            <li> h.getAttribute </li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li> document.getElementById ('s') - can be retrieved called by document object </li>
+                            <li> document.getElementsByTagName ('p')</li>
+                            <li> document.getElementByTagName
+                            <li> document.getElements
+                            <li> document.querySelector - allow specify CSS selector </li>
+                            <li> document.querySelectorAll  </li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li> document.childNodes </li>
+                            <li> document.children </li>
+                            <li> document.head.childNodes </li>
+                            <li> document.head.children </li>
+                            <li> document.childElementCount </li>
+                            <li> document.hasChildren </li>
+                            <li> document.firstChild </li>
+                            <li> document.firstElementChild </li>
+                            <li> document.lastChild </li>
+                            <li> document.lastElementChild </li>
+                            <li> document.nextSibling </li>
+                            <li> document.body.children[3] </li>
+                            <li> document.body.firstChild.nextElementSibling </li>
+                            <li> document.body.firstChild.nextSibling </li>
+                            <li> document.body.firstChild.previousElementSibling </li>
+                            <li> document.body.firstChild.previousSibling </li>
+                            <li> document.parentElement </li>
+                            <li> document.parentNode </li>
+                        </ul>
+                        <hr>  
+                        <ul>
+                            <li>window.navigator.vendor </li>
+                            <li>window.screen.height </li>
+                            <li>window.document</li>
+                            <li>p.textcontent</li>
+                            <li>p.querySelector</li>
+                        </ul>
+                    </div>
+                </div>
+				
+				<div class="mh-container" id="global">
+                    <div class="net mh">
+                        <strong>Global Objects</strong>
+                    </div>
+					<div class="fields">
+                        <ul>
+							<li>window.navigator.vendor </li>
+							<li>window.screen.height </li>
+							<li>window.document</li>
+						</ul>
+						<hr>
+						<ul>
+							<li>p.textcontent</li>
+							<li>p.querySelector</li>
+							<li> document.getElementById ('s') - can be retrieved called by document object </li>
+							<li> document.getElementsByTagName ('p') - retrieving </li>
+							<li> document.getElementByTagName</li>
+							<li> document.getElements</li>
+							<li> document.querySelector - allow specify CSS selector </li>
+							<li> document.querySelectorAll  </li>
+						</ul>
+						<hr> 
+						<ul>
+							<li> innertext property - treated not as mark up </li>
+							<li> inner html - interpret any mark up put on/in a value </li>
+							<li> outertext property </li>
+							<li> outerhtml </li>
+						</ul>
+                    </div>
+				</div>
+				
+				<div class="mh-container" id="standard">
+                    <div class="net mh">
+                        <strong>Standard Objects</strong>
+                    </div>
+                    <div class="fields">
+                        <hr>
+						<ul>
+							<li> Array </li>
+							<li> Boolean </li>
+							<li> Date </li>
+							<li> Error </li>
+							<li> Function </li>
+							<li> JSON </li>
+							<li> Math </li>
+							<li> Number </li>
+							<li> Object </li>
+							<li> RegExp </li>
+							<li> String </li>
+							<li> Map </li>
+							<li> Set </li>
+							<li> Weak Map </li>
+							<li> Weak Set </li>
+						</ul>
+                    </div>
+                </div>
+
+				<div class="mh-container" id="expression">
+                    <div class="net mh">
+                        <strong>Expressions and Operators</strong>
+                    </div>
+                    <div class="fields">
+                        <hr>
+                        <ul>
+							<li> Assignment operators </li>
+							<li> Comparison operators </li>
+							<li> Arithmetic operators </li>
+							<li> Bitwise  operators </li>
+							<li> Logical operators </li>
+							<li> String operators </li>
+							<li> Conditional operator </li>
+							<li> Comma operators </li>
+							<li> Unary operators </li>
+							<li> Relational operator </li>
+						</ul>
+                    </div>
+                </div>
+				
+				<div class="mh-container" id="simple">
+                    <div class="net mh">
+                        <strong>Simple/Primitive Types</strong>
+                    </div>
+                    <div class="fields">
+                        <hr>
+                        <li> Boolean Type (True/False) </li>
+							<ul>
+							<li> 0 - Falsy value (ex. null, undefined, zero, empty String) </li>
+							<li> 1 - Truthy value </li> </ul>
+						<li> Numbers </li>
+						<li> Strings </li>
+						<li> Undefined </li>
+						<li> Null </li>
+                    </div>
+                </div>
+				
+                <div class="mh-container" id="feature">
+                    <div class="net mh">
+                        <strong>Features of Ecma Script 2016</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>3 Keywords</strong></h5>
+                        <hr>
+                        <ul>
+                            <li> VAR </li>
+                            <li> LET </li>
+                            <li> CONST (note: You cannot re-assign const variable)</li>
+                        </ul>
+                    </div>
+                </div>
+				
+				<div class="mh-container" id="array">
+                    <div class="net mh">
+                        <strong>JavaScript Arrays</strong>
+                    </div>
+					<div class="fields">
+						<ul>
+							<li> var empty Array = new Array(); </li>
+							<li> var alsoEmptyArray = []; </li>
+							<li> var alsoEmptyArray.length() </li>
+							<li> var alsoEmptyArray.[] </li>
+							<li> var ArrayWithLengthFire = new Array(5); </li>
+							<li> var arrayWithOneElementWithValue5 = [5]; </li>
+							<li> var array() </li>
+							<li> var sameArray() <li>
+							<li> var mixedElementTypes = [10, true, 'hello', new] </li>
+							<li> var multiDimArray = [[], [], []]; </li>
+						</ul>
+                        <hr>
+                        
+                    </div>
+					<div class="fields">
+						<h5><strong>Array destructuring</strong></h5>
+                        <hr>
+						<ul>
+						<li> var array = [] </li>
+						<li> var [] = array; </li>
+						<li> var [min,...others] = array; (spread syntax) </li>
+						<li> var [ ,x, ,y] = array; (skip) </li>
+						</ul>
+                        <hr>
+                    </div>
+					<div class="fields">
+						<h5><strong>Array Indices</strong></h5>
+                        <hr>
+						<p> array indices can be non-contiguous </p>
+                        <hr>
+                    </div>
+				</div>	
+				<div class="mh-container" id="method">
+                    <div class="net mh">
+                        <strong>JavaScript Arrays: Methods</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Mutator Methods</strong></h5>
+                        <hr>
+                        <ul>
+							<li> Array.prototype.copyWithin() </li>
+							<li> Array.prototype.fill() </li>
+							<li> Array.prototype.pop() </li>
+							<li> Array.prototype.push() </li>
+							<li> Array.prototype.reverse() </li>
+							<li> Array.prototype.shift() </li>
+							<li> Array.prototype.unshift() </li>
+							<li> Array.prototype.sort() </li>
+							<li> Array.prototype.spice() </li>
+						</ul>
+                    </div>
+					<div class="fields">
+                        <h5><strong>Accesor Methods</strong></h5>
+                        <hr>
+                        <ul>
+							<li> Array.prototype.includes() </li>
+							<li> Array.prototype.join() </li>
+							<li> Array.prototype.lastIndexOf() </li>
+							<li> Array.prototype.slice() </li>
+						</ul>
+                    </div>
+					<div class="fields">
+                        <h5><strong>Iteration Methods</strong></h5>
+                        <hr>
+                        <ul>
+							<li> Array.prototype.every() </li>
+							<li> Array.prototype.filter() </li>
+							<li> Array.prototype.find() </li>
+							<li> Array.prototype.findIndex() </li>
+							<li> Array.prototype.forEach() </li>
+							<li> Array.prototype.keys() </li>
+							<li> Array.prototype.values() </li>
+							<li> Array.prototype.reduce() </li>
+							<li> Array.prototype.reduceRight() </li>
+							<pre> 
+	ex. a = [2,5,12,0,45,-4,7,9]
+	a.filter (v => v % 2 == 0)
+	[2,12,0,-4]
+	a.filter (v =>v %2 = 1)
+	[5,45,7,9]
+	a.filter ((v,i) => i %2 == 1)
+							</pre>
+						</ul>
+						<ul>
+							<li> a.every (v => v > 0) = false </li>
+							<li> a.some (v => v>0) = true </li>
+							<li> a.map (v => v*2) </li>
+							<li> a.reduce ((acc,v) => acct=v) </li>
+						</ul>
+                    </div>
+                </div>
+
+				<div class="mh-container" id="object">
+                    <div class="net mh">
+                        <strong>JavaScript Arrays: Objects</strong>
+                    </div>
+                    <div class="fields">
+						<p> prototype based </p>
+                        <ul>
+							<li> var emptyObj = new Object(); </li>
+							<li> var boolObj = new Object(true); </li>
+							<li> var numObj = new Object(10); </li>
+							<li> var strObj = new Object("hi"); </li>
+						</ul>
+                    </div>
+                 </div>   
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 ref">
+                    <hr>
+                    <p>References:</p>
+                    <p><a href="https://www.w3.org/2003/01/dom2-javadoc/org/w3c/dom/Node.html">https://www.w3.org/2003/01/dom2-javadoc/org/w3c/dom/Node.html</a></p>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+        window.jQuery || document.write('<script src="jsjquery.min.js"><\/script>')
     </script>
     <script src="js/bootstrap.min.js"></script>
 
     <script src="js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+
 </body>
 
 </html>
