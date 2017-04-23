@@ -1,53 +1,276 @@
-<!DOCTYPE HTML>
-	<html>
-	    <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture1.html">Lecture 1</a></li>
-	                <li><a href ="lecture2.html">Lecture 2</a></li>
-	                <li><a href ="lecture3.html">Lecture 3</a></li>
-	                <li><a href ="lecture4.html">Lecture 4</a></li>
-	                <li><a href ="lecture5.html">Lecture 5</a></li>
-	                <li><a href ="lecture6.html">Lecture 6</a></li>
-	                <li><a href ="lecture7.html">Lecture 7</a></li>
-	                <li><a href ="lecture8.html">Lecture 8</a></li>
+<!DOCTYPE html>
+<html lang="en">
 
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-	      
-	<div class="lecture lecture 1" id = "lecture 1">
-            <h1>Lecture 1: Cascading Style Sheets (CSS) </h1>
-                 <ul> <li> Language used to specify the presentation aspects of layout and formatting of structurally marked up documents. </li>
-                 <li> developed by Håkon Wium Lie (CHSS) and Bert Bos (SSP). </li>
-				 </ul>
-	<h3> Versions </h3>
-	<ul> 
-	<li> CSS 1 (December 17 1996) </li>
-	<li> CSS 2.1 (Ian Hickson, monolithic specification or one stop shop)</li>
-	<li> CSS 3 (new addition such as media queries (mobiles), animations, transforms) </li>
-	</ul>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-	<h3> CSS Preprocessors (CSS Frameworks)</h3>
-	<ul>
-	<li> SASS </li>
-	<li> LESS </li>
-	<li> 960 Grid System </li>
-	<li> Bootstrap Foundation </li>
-	<li> Materialize </li>
-	<li> etc. </li>
-	</ul> 
+    <title>Hypertext Markup Language (HTML)</title>
 
-	<h3> HTML Preprocessors </h3>
-	<ul>
-	<li> Markdown </li>
-	<li> Slim </li>
-	<li> Pug </li>
-	<li> HAML </li>
-	</ul>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style/lecture1.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">WebTek 2017</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prelim <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture%201.html">Internet and the World Wide Web</a></li>
+                            <li><a href="lecture%202.html">Hypertext Transfer Protocol (HTTP)</a></li>
+                            <li><a href="lecture%203.html">Hypertext Resource Addressing</a></li>
+                            <li><a href="lecture%204.html">HTTP Request Message</a></li>
+                            <li><a href="lecture%205.html">HTTP Response Message</a></li>
+                            <li><a href="lecture%206.html">HTTP Request Methods</a></li>
+                            <li><a href="lecture%207.html">HTTP Message Headers</a></li>
+                            <li><a href="lecture%208.html">HTTP Status Codes</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Midterm<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lecture 1.html">Hypertext Markup Language (HTML)</a></li>
+                            <li><a href="lecture 2.html">Cascading Style Sheets (CSS)</a></li>
+                            <li><a href="lecture 3.html">Javascript (JS)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Final</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#history">HTML History</a></li>
+                    <li><a href="#elements">HTML Elements</a></li>
+                    <li><a href="#attributes">HTML Attributes</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header" id="history">Hypertext Markup Language (HTML)</h1>
+
+                <div class="mh-con">
+                    <div class="net mh">
+                        <strong>HTML History</strong>
+                    </div>
+                    
+                    <div class="fields">
+                        <p>HTML has had a life-span of roughly seven years. During that time, it has evolved from a simple language with a small number of tags to a complex system of mark-up, enabling authors to create all-singing-and-dancing Web pages complete with animated images, sound and all manner of gimmicks. This chapter tells you something about the Web's early days, HTML, and about the people, companies and organizations who contributed to HTML+, HTML 2, HTML 3.2, HTML 4 and finally, HTML 5.</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Time Table</strong></h5>
+                        <hr>
+                        <ul>
+                            <li>1989: Tim Berners-Lee invents the Web with HTML as its publishing language</li>
+                    
+                            <li>Through 1990: The time was ripe for Tim's invention
+                          
+                            <li>Hypertext</li>
+                            <li>The domain name system</li>
+                            <li>Choosing the right approach to create a global hypertext system</li>
+                            <li>Tim bases his HTML on an existing internationally agreed upon method of text mark-up</li>
+                            
+                            <li>September 1991: Open discussion about HTML across the Internet begins</li>
+                            <li>Late 1992: NCSA is intrigued by the idea of the Web</li>
+                            <li>December 1992: Marc Andreessen makes a brief appearance on WWW- talk</li>
+                            <li>March 1993: Lou Montulli releases the Lynx browser version 2.0a</li>
+                            <li>Early 1993: Dave Raggett begins to write his own browser</li>
+                            <li>April 1993: The Mosaic browser is released</li>
+                            <li>Late 1993: Large companies underestimate the importance of the Web</li>
+                            <li>May 1994: NCSA assigns commercial rights for Mosaic browser to Spyglass, Inc.</li>
+                            <li>May 1994: The first World Wide Web conference is held in Geneva, with HTML+ on show</li>
+                            <li>September 1994: The Internet Engineering Task Force (IETF) sets up an HTML working group</li>
+                            <li>July 1994: HTML specification for HTML 2 is released</li>
+                            <li>November 1994: Netscape is formed</li>
+                            <li>Late 1994: The World Wide Web Consortium forms</li>
+                            <li>Through 1995: HTML is extended with many new tags</li>
+                            <li>March 1995: HTML 3 is published as an Internet Draft</li>
+                            <li>March 1995: A furor over the HTML Tables specification</li>
+                            <li>August 1995: Microsoft's Internet Explorer browser comes out</li>
+                            <li>September 1995: Netscape submits a proposal for frames</li>
+                            <li>November 1995: The HTML working group runs into problems</li>
+                            <li>November 1995: Vendors unite to form a new group dedicated to developing an HTML standard</li>
+                            <li>November 1995: Style sheets for HTML documents begin to take shape</li>
+                            <li>November 1995: Internationalization of HTML Internet Draft</li>
+                            <li>December 1995: The HTML working group is dismantled</li>
+                            <li>February 1996: The HTML ERB is formed</li>
+                            <li>April 1996: The W3 Consortium working draft on Scripting comes out</li>
+                            <li>July 1996: Microsoft seems more interested than first imagined in open standards</li>
+                            <li>December 1996: Work on `Cougar' is begun</li>
+                            <li>January 1997: HTML 3.2 is ready</li>
+                            <li>Spring 1998: Cougar has now fully materialized as HTML 4.0 and is a W3C Proposed Recommendation. </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="mh-container" id="elements">
+                    <div class="net mh">
+                        <strong>HTML Elements</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>&lthtml&gt</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>&lthead&gt</strong></h5>
+                        <hr>
+                        <ul>
+                            <li> title </li>
+                            <li> base </li>
+                            <li> link </li>
+                            <li> meta - info about the author or version (authoring tool) </li>
+                            <li> style - css </li>
+                        </ul>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>&ltbody&gt</strong> - actual content of the document</h5>
+                        <hr>
+                        <ul>
+                            <li> article, aside, nav, section, header, footer (main html 5) </li>
+                            <li> address, div </li>
+                            <li> h1, h2, h3, h4, h5, h6 (headings) </li>
+                            <li> p </li>
+                            <li> hr - thematic break (documenting) </li>
+                            <li> pre - preformatted text </li>
+                            <li> blockquote - in line citations (larger block) </li>
+                            <li> ol - ordered list, ul - unordered list </li>
+                            <li> li </li>
+                            <li> dl - description list </li>
+                            <li> dt, dd - simple markup </li>
+                            <li> figure - embedded function </li>
+                            <li> figcaption - embedded function </li>
+                            <li> a </li>
+                            <li> em - emphasis </li>
+                            <li> strong - bold </li>
+                            <li> small - side comment </li>
+                            <li> s - obsoleted text </li>
+                            <li> cite - citation </li>
+                            <li> q - quote </li>
+                            <li> dfn - defining instance </li>
+                            <li> abbr - subsequent usage </li>
+                            <li> ruby, rb, rt, rte, rp - assign language annotation </li>
+                            <li> data, time, embed- machine readable data </li>
+                            <li> code, var </li>
+                            <li> samp - sample output </li>
+                            <li> kbd - sample input </li>
+                            <li> sub - subscript, sup - superscript </li>
+                            <li> i, b, u </li>
+                            <li> bdi, bdo - mark bidirectional </li>
+                            <li> span - generic divider like dive, embedded with block of text </li>
+                            <li> br - line break </li>
+                            <li> wbr - break opportunity (narrow) </li>
+                            <li> ins - insertion, del - deletion </li>
+                            <li> table </li>
+                            <li> caption, colgroup, col, thread, tbody, tfoot </li> 
+                            <li> tr </li>
+                            <li> th, ta </li>
+                            <li> form </li>
+                            <li> label, input, button, select </li> 
+                            <li> picture, img, iframe, embed, object, param, audio, video, source, track </li>
+                            <li> map, area </li>
+                            <li> svg - not html (scalable vector graphics) </li>
+                            <li> canvas </li>
+                            <li> script, noscript </li>
+                            <li> template </li>
+                        </ul>
+                        <pre>
+    &lt!DOCTYPE HTML&gt                    
+    &lthtml&gt
+
+    &lthead&gt
+        &ltmeta&gt
+        &lttitle&gt&lt/title&gt
+        &ltlink&gt
+        &ltscript&gt&lt/script&gt
+    &lt/head&gt
+    
+    &ltbody&gt
+        &ltheader&gt&lt/header&gt
+        &ltsection&gt&lt/section&gt
+        &ltfooter&gt&lt/footer&gt
+    &lt/body&gt
+    &lt/html&gt                     
+                        </pre>    
+                    </div>
+                    
+                </div>
+                <div class="mh-container" id="attributes">
+                    <div class="net mh">
+                        <strong>HTML Attributes</strong>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Global Attributes</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Element - Specific Attributes</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>Data - * Attributes</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>role, aria - * Attributes</strong></h5>
+                        <hr>
+                        <p>Rich accessibility</p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>WAI-ARIA</strong></h5>
+                        <hr>
+                        <p></p>
+                    </div>
+                    <div class="fields">
+                        <h5><strong>WCAG 2.0</strong></h5>
+                        <hr>
+                        <p>Web Content Accesibility Guidelines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="jsjquery.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>
