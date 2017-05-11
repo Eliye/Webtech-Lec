@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+	<html>
+	    <body>
+	      <nav class="navClass">
+	        <ul>
+	          <li><a href="index.html">HOME</a></li>
+	          <li>LECTURES
+	            <ul class="navlecture">
+	                <li><a href ="lecture1.html">Lecture 1</a></li>
+	                <li><a href ="lecture2.html">Lecture 2</a></li>
+	                <li><a href ="lecture3.html">Lecture 3</a></li>
+	                <li><a href ="lecture4.html">Lecture 4</a></li>
+	                <li><a href ="lecture5.html">Lecture 5</a></li>
+	                <li><a href ="lecture6.html">Lecture 6</a></li>
+	                <li><a href ="lecture7.html">Lecture 7</a></li>
+	                <li><a href ="lecture8.html">Lecture 8</a></li>
+
+	            </ul>
+	         </li>
+	          <li><a>GLOSSARY</a></li>
+	          <li><a>ABOUT OUR PAGE</a></li>
+	        </ul>
+	      </nav>
+        <div class="lecture lecture 1" id = "lecture 1">
+            <h1>Lecture 1: Java Server Pages (JSP) </h1>
+<p> - servlet in disguise. </p>
+<p> <meta http-equiv = "Content-Type" content="text/html" </p>
+<ul>
+<h3> JSPService Method </h3>
+<li> GET </li>
+<li> POST - HttpServeletRequest </li>
+<li> HEAD - HttpServeletResponse</li>
+</ul>
+
+<ul>
+<li> JSP Comment </li>
+<p> <%--
+--%> </p>
+<li> JSP Directives </li>
+<p> <%@page contentType="text/html" pageEncoding="UTF-8" import = "java.util.Date"%> </p>
+<ul>
+<li> autoflash </li>
+<li> buffer </li>
+<li> contentType </li>
+<li> extends </li>
+<li> info </li>
+<li> isELIgnored </li>
+<li> isThreadSafe </li>
+<li> language </li>
+<li> pageEncoding </li>
+<li> Session </li>
+</ul>
+<li> JSP Template Text </li>
+<p> "<h1>...</h1>" </p>
+<p> "<p>....</p>" </p>
+<li> JSP Standard Actions </li>
+<p> <jsp:include page= "WEB-INF/fragments/includecontent.html/"> </p>
+<p> <jsp:forward page= " " > </p>
+<p> <jsp:element name = "a"> </p>
+<li> EL Expressions </li>
+<p> - expression language </p>
+<p> "<p>${param.name}! </p>" </p>
+<p> "<p> your browser is ${header['user-Agent']} </p>" </p>
+<ul>
+<li> paramValues </li>
+<li> headerValues </li>
+<li> pageContext </li>
+<li> pageScope </li>
+<li> requestScope </li>
+</ul>
+
+<ul>
+<h3> JSP Scriplet </h3>
+<p> - java embeded to JSP. </p>
+<li> Scriplet Scriplet </li>
+<p> int i =0;
+for (_;i<5;i++) {
+out.println("hello!");
+} </p>
+<li> Scriplet Expression </li>
+<p> "<p> Today is <%=(newDate()).toString()%>. </p>" </p>
+<li> Scriplet Declaration - can declare instance variables </li>
+<p> <%! 
+private int z;
+method --
+%> </p>
+</ul>
+
+<ul>
+<h3> JSP Standard Tag Library </h3>
+<li> <%@taglib = "http://java.sun.com/jsp/jstl/core" prefix = "core" %> </li>
+<li> <%@taglib = "http://java.sun.com/jsp/jstl/function" prefix = "func" %> </li>
+<li> <%@taglib = "http://java.sun.com/jsp/jstl/sql" prefix = "sql" %> </li>
+<li> <%@taglib = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %> </li>
+<li> <%@taglib = "http://java.sun.com/jsp/jstl/xml" prefix = "xml" %> </li>
+</ul>
+
+<ul>
+<h3> SSTL Custom Actions </h3>
+<ul>
+<li> <sql: dateParam/> </li>
+<li> <sql: param> </li>
+<li> <sql: query> </li>
+<li> <sql: setDateSource/> </li>
+<li> <sql: transaction> </li>
+<li> <sql: update> </li>
+</ul>
+<ul>
+<li> <sql: setDataSource/> </li>
+<li> <sql: driver = "" /> </li>
+<li> <sql: url = "" /> </li>
+<li> <sql: user = "" /> </li>
+<li> <sql: pass = "" /> </li>
+</ul>
+<ul>
+<li> <sql: query var="result"> </li>
+<li> <sql: param value="EL"/>
+</ul>
+</ul>
+    
+        </div>
+</body>
+    
+</html>
