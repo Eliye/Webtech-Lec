@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+	<html>
+	    <body>
+	      <nav class="navClass">
+	        <ul>
+	          <li><a href="index.html">HOME</a></li>
+	          <li>LECTURES
+	            <ul class="navlecture">
+	                <li><a href ="lecture1.html">Lecture 1</a></li>
+	                <li><a href ="lecture2.html">Lecture 2</a></li>
+	                <li><a href ="lecture3.html">Lecture 3</a></li>
+	                <li><a href ="lecture4.html">Lecture 4</a></li>
+	                <li><a href ="lecture5.html">Lecture 5</a></li>
+	                <li><a href ="lecture6.html">Lecture 6</a></li>
+	                <li><a href ="lecture7.html">Lecture 7</a></li>
+	                <li><a href ="lecture8.html">Lecture 8</a></li>
+
+	            </ul>
+	         </li>
+	          <li><a>GLOSSARY</a></li>
+	          <li><a>ABOUT OUR PAGE</a></li>
+	        </ul>
+	      </nav>
+        <div class="lecture lecture 4" id = "lecture 4">
+            <h1>Lecture 4: Java Script (JSP) </h1>
+<h3> Node JS </h3>
+<p> - can create desktop application </p>
+<ul>
+<h3> MEAN Stack </h3>
+<li> Mongo DB - BSON (binary JSON) </li>
+<li> Express - back end application framework </li>
+<li> Angular - client side </li>
+<li> Node </li>
+</ul>
+<hr>
+<ul>
+<li> npm init -dependencies file </li>
+<li> copy con index.js </li>
+<p> var http = require('http'); </p>
+<p> var server = http.createServer(handler); </p>
+<p> server.listen(81); //port </p>
+</ul>
+<ul>
+<li> node index.js //access index.js </li>
+<p> - nodemon // watches file system </p>
+<li> npm install nodemon --save </li>
+</ul>
+<p> function handler (request, response) { </p>
+<p> response.end ('hello') </p>
+<h4> Chaining of Calls </h4>
+<ul>
+<li> request.on('data', function (data) </li>
+<li> response.write </li>
+<li> response.end() </li>
+<p> fs.readFileSync(filename) </p>
+<p> response.writeHead ( </p>
+<p> status code </p>
+<p> status message ) </p>
+</ul>
+<p> text and binary response </p>
+<ul>
+<li> mydbapp </li>
+<li> querystring </li>
+<p> *try catch </p>
+<p> var mysql = require('mysql'); </p>
+</ul>
+<ul>
+<p> var url = request.url; </p>
+<p> switch (url) </p>
+<p> case1 '../home'; </p>
+<p> case2 '../login'; </p>
+</ul>
+<ul>
+<h3> Express </h3>
+<li> app.get('/login', function (request, response) </li>
+<li> app.use(express.static('public') </li>
+</ul>
+
+        </div>
+</body>
+    
+</html>
