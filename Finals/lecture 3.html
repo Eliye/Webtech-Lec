@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+	<html>
+	    <body>
+	      <nav class="navClass">
+	        <ul>
+	          <li><a href="index.html">HOME</a></li>
+	          <li>LECTURES
+	            <ul class="navlecture">
+	                <li><a href ="lecture 1.html">Lecture 1</a></li>
+	                <li><a href ="lecture 2.html">Lecture 2</a></li>
+	                <li><a href ="lecture 3.html">Lecture 3</a></li>
+	                <li><a href ="lecture 4.html">Lecture 4</a></li>
+	                <li><a href ="lecture 5.html">Lecture 5</a></li>
+
+	            </ul>
+	         </li>
+	          <li><a>GLOSSARY</a></li>
+	          <li><a>ABOUT OUR PAGE</a></li>
+	        </ul>
+	      </nav>
+        <div class="lecture lecture 1" id = "lecture 1">
+            <h1>Lecture 3: PHP (Hypertext Preprocessor) </h1>
+<ul>
+<h3> PHP </h3>
+<li> a widely-used, open source scripting language</li>
+<li> scripts are executed on the server </li>
+<li> is free to download and use</li>
+</ul>
+
+<ul>
+<h3> PHP Global Variables - Superglobals </h3>
+<li> Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.</li>
+<ul>
+<li> $GLOBALS - PHP super global variable which is used to access global variables from anywhere in the PHP script.</li>
+<li> $_SERVER - $_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.</li>
+<li> $_REQUEST - PHP $_REQUEST is used to collect data after submitting an HTML form.</li>
+<li> $_POST - PHP $_POST is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</li>
+<li> $_GET - PHP $_GET can also be used to collect form data after submitting an HTML form with method="get". $_GET can also collect data sent in the URL.</li>
+<li> $_FILES - </li>
+<li> $_ENV</li>
+<li> $_COOKIE </li>
+<li> $_SESSION </li>
+</ul>
+
+<ul>
+<h3> SESSION FUNCTIONS </h3>
+<li> session_abort — Discard session array changes and finish session </li>
+<li> session_cache_expire — Return current cache expire </li>
+<li> session_cache_limiter — Get and/or set the current cache limiter </li>
+<li> session_commit — Alias of session_write_close </li>
+<li> session_create_id — Create new session id </li>
+<li> session_decode — Decodes session data from a session encoded string</li>
+<li> session_destroy — Destroys all data registered to a session </li>
+<li> session_encode — Encodes the current session data as a session encoded string </li>
+<li> session_gc — Perform session data garbage collection </li>
+<li> session_get_cookie_params — Get the session cookie parameters </li>
+<li> session_id — Get and/or set the current session id </li>
+<li> session_is_registered — Find out whether a global variable is registered in a session </li>
+<li> session_module_name — Get and/or set the current session module </li>
+<li> session_name — Get and/or set the current session name</li>
+<li> session_regenerate_id — Update the current session id with a newly generated one</li>
+<li> session_register_shutdown — Session shutdown function</li>
+<li> session_register — Register one or more global variables with the current session</li>
+<li> session_reset — Re-initialize session array with original values</li>
+<li> session_save_path — Get and/or set the current session save path</li>
+<li> session_set_cookie_params — Set the session cookie parameters</li>
+<li> session_set_save_handler — Sets user-level session storage functions</li>
+<li> session_start — Start new or resume existing session</li>
+<li> session_status — Returns the current session status</li>
+<li> session_unregister — Unregister a global variable from the current session</li>
+<li> session_unset — Free all session variables</li>
+<li> session_write_close — Write session data and end session</li>
+</ul>
+
+<p> References: </p>
+<ul>
+<li> <a href ="https://www.w3schools.com/php/php_intro.asp"></a></li>
+<li> <a href ="https://www.w3schools.com/php/php_superglobals.asp"></a></li>
+<li> <a href ="https://www.google.com.ph/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjQmKHJxPbTAhUHX5QKHZzMCPAQFgggMAA&url=http%3A%2F%2Fphp.net%2Fmanual%2Fen%2Fref.session.php&usg=AFQjCNH_JQUdxsa1WjZ5vUGn3WYS27E53g"></a></li>
+</ul>
