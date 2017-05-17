@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+	<html>
+	    <body>
+	      <nav class="navClass">
+	        <ul>
+	          <li><a href="index.html">HOME</a></li>
+	          <li>LECTURES
+	            <ul class="navlecture">
+	                <li><a href ="lecture 1.html">Lecture 1</a></li>
+	                <li><a href ="lecture 2.html">Lecture 2</a></li>
+	                <li><a href ="lecture 3.html">Lecture 3</a></li>
+	                <li><a href ="lecture 4.html">Lecture 4</a></li>
+	                <li><a href ="lecture 5.html">Lecture 5</a></li>
+
+	            </ul>
+	         </li>
+	          <li><a>GLOSSARY</a></li>
+	          <li><a>ABOUT OUR PAGE</a></li>
+	        </ul>
+	      </nav>
+        <div class="lecture lecture 1" id = "lecture 1">
+            <h1>Lecture 1: Request Processing and Response Generation </h1>
+<ul>
+<h3> Request Processing - Request processing takes place in three stages: awakening, state synchronization, and action invocation. </h3>
+<li> Awake - This stage is carried out when WebObjects invokes the awake method</li>
+<li> Sync - the takeValuesFromRequest method is invoked, which causes the values entered in form elements by the user to be copied into the corresponding instance variables.  </li>
+<li> Action - This is where the invokeAction method is invoked; the action the user chose is executed.</li>
+</ul>
+
+<ul>
+<h3> Response Generation - After the form values are gathered and the action method is invoked, the application creates a response page. This is the component returned by the action method. The response-generation process has two phases: append to response and sleep. </h3>
+<li> Response - Each WebObjects element's appendToResponse method is invoked, so that it can add its content to the page to be displayed.</li>
+<ul>
+<li> public [...] getKey() </li>
+<li> public [...] key() </li>
+<li> private [...] _getKey() </li>
+<li> private [...] key() </li>
+<li> [...] _key </li>
+<li> [...] key </li>
+</ul>
+<li> Sleep - When the response process is completed, the sleep methods of the Component, Session, and Application objects are invoked.  </li>
+</ul>
+
+
+  <p> Reference: </p>
+  <ul> 
+  <li> http://mirror.informatimago.com/next/developer.apple.com/documentation/LegacyTechnologies/WebObjects/WebObjects_5/DiscoveringWO/UserInput/Request_Processing.html</li>
+  </ul>  
+        </div>
+</body>
+    
+</html>
