@@ -1,80 +1,269 @@
-<!DOCTYPE HTML>
-	<html>
-	    <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
+<!DOCTYPE html>
+<html lang="en">
 
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-        <div class="lecture lecture 1" id = "lecture 1">
-            <h1>Lecture 3: PHP (Hypertext Preprocessor) </h1>
-<ul>
-<h3> PHP </h3>
-<li> a widely-used, open source scripting language</li>
-<li> scripts are executed on the server </li>
-<li> is free to download and use</li>
-</ul>
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Node.js</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/now-ui-kit.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+</head>
 
-<ul>
-<h3> PHP Global Variables - Superglobals </h3>
-<li> Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.</li>
-<ul>
-<li> $GLOBALS - PHP super global variable which is used to access global variables from anywhere in the PHP script.</li>
-<li> $_SERVER - $_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.</li>
-<li> $_REQUEST - PHP $_REQUEST is used to collect data after submitting an HTML form.</li>
-<li> $_POST - PHP $_POST is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</li>
-<li> $_GET - PHP $_GET can also be used to collect form data after submitting an HTML form with method="get". $_GET can also collect data sent in the URL.</li>
-<li> $_FILES - </li>
-<li> $_ENV</li>
-<li> $_COOKIE </li>
-<li> $_SESSION </li>
-</ul>
+<body class="profile-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-toggleable-md bg-primary fixed-top navbar-transparent " color-on-scroll="500">
+        <div class="container">
+            <div class="dropdown button-dropdown">
+                <a href="index.html" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    WebTek 2017
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="assets/img/blurred-image-1.jpg" style="">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Prelim
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="prelim/lecture%201.html">Internet and the World Wide Web</a>
+                            <a class="dropdown-item" href="prelim/lecture%202.html">Hypertext Transfer Protocol (HTTP)</a>
+                            <a class="dropdown-item" href="prelim/lecture%203.html">Hypertext Resource Addressing</a>
+                            <a class="dropdown-item" href="prelim/lecture%204.html">HTTP Request Message</a>
+                            <a class="dropdown-item" href="prelim/lecture%205.html">HTTP Response Message</a>
+                            <a class="dropdown-item" href="prelim/lecture%206.html">HTTP Request Methods</a>
+                            <a class="dropdown-item" href="prelim/lecture%207.html">HTTP Message Headers</a>
+                            <a class="dropdown-item" href="prelim/lecture%208.html">HTTP Status Codes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Midterm
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="midterm/lecture%201.html">Hypertext Markup Language (HTML)</a>
+                            <a class="dropdown-item" href="midterm/lecture%202.html">Cascading Style Sheets (CSS)</a>
+                            <a class="dropdown-item" href="midterm/lecture%203.html">Javascript (JS)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Final
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="lecture1.html">Java Servlet and JSP</a>
+                            <a class="dropdown-item" href="lecture2.html">PHP</a>
+                            <a class="dropdown-item" href="lecture3.html">NodeJS</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+        <div class="page-header page-header-small" filter-color="orange">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img/web.jpg');">
+            </div>
+            <div class="container">
+                <div class="content-center">
+                    <h1 class="title">Node.js</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <h3 class="title">Node.js</h3>
+                <h5 class="description">Node.js is a very powerful JavaScript-based framework/platform built on Google Chrome's JavaScript V8 Engine. It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications. Node.js is open source, completely free, and used by thousands of developers around the world.</h5>
 
-<ul>
-<h3> SESSION FUNCTIONS </h3>
-<li> session_abort — Discard session array changes and finish session </li>
-<li> session_cache_expire — Return current cache expire </li>
-<li> session_cache_limiter — Get and/or set the current cache limiter </li>
-<li> session_commit — Alias of session_write_close </li>
-<li> session_create_id — Create new session id </li>
-<li> session_decode — Decodes session data from a session encoded string</li>
-<li> session_destroy — Destroys all data registered to a session </li>
-<li> session_encode — Encodes the current session data as a session encoded string </li>
-<li> session_gc — Perform session data garbage collection </li>
-<li> session_get_cookie_params — Get the session cookie parameters </li>
-<li> session_id — Get and/or set the current session id </li>
-<li> session_is_registered — Find out whether a global variable is registered in a session </li>
-<li> session_module_name — Get and/or set the current session module </li>
-<li> session_name — Get and/or set the current session name</li>
-<li> session_regenerate_id — Update the current session id with a newly generated one</li>
-<li> session_register_shutdown — Session shutdown function</li>
-<li> session_register — Register one or more global variables with the current session</li>
-<li> session_reset — Re-initialize session array with original values</li>
-<li> session_save_path — Get and/or set the current session save path</li>
-<li> session_set_cookie_params — Set the session cookie parameters</li>
-<li> session_set_save_handler — Sets user-level session storage functions</li>
-<li> session_start — Start new or resume existing session</li>
-<li> session_status — Returns the current session status</li>
-<li> session_unregister — Unregister a global variable from the current session</li>
-<li> session_unset — Free all session variables</li>
-<li> session_write_close — Write session data and end session</li>
-</ul>
+                <div class="row">
 
-<p> References: </p>
-<ul>
-<li> <a href ="https://www.w3schools.com/php/php_intro.asp"></a></li>
-<li> <a href ="https://www.w3schools.com/php/php_superglobals.asp"></a></li>
-<li> <a href ="https://www.google.com.ph/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjQmKHJxPbTAhUHX5QKHZzMCPAQFgggMAA&url=http%3A%2F%2Fphp.net%2Fmanual%2Fen%2Fref.session.php&usg=AFQjCNH_JQUdxsa1WjZ5vUGn3WYS27E53g"></a></li>
-</ul>
+                    <div class="col-md-10 offset-md-1 col-xl-6 offset-xl-0">
+                        <!-- Tabs with Background on Card -->
+                        <div class="card">
+                            <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Node.js Diagram</a>
+                                </li>
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="home1" role="tabpanel">
+                                        <img src="assets/img/nodejsconcepts.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tabs on plain Card -->
+                    </div>
+
+                    <div class="col-md-10 offset-md-1 col-xl-6 offset-xl-0">
+                        <!-- Nav tabs -->
+                        <div class="card">
+                            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#who" role="tab">
+                                        Node.js 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#njs" role="tab">
+                                        Who uses Node.js?
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#where" role="tab">
+                                        Where to use Node.js?
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="who" role="tabpanel">
+                                        <p>Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.</p>
+                                        <p>Node.js also provides a rich library of various JavaScript modules which simplifies the development of web applications using Node.js to a great extent.</p>
+                                        <p>Node.js = Runtime Environment + JavaScript Library</p>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="njs" role="tabpanel">
+                                        <p>General Electric, eBay, GoDaddy, Microsoft, PayPal, Uber, Wikipins, Yahoo!, and Yammer are some of the following exhaustive list of projects, application and companies which are using Node.js.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="where" role="tabpanel">
+                                        <p><b>I/O bound Applications</b></p>
+                                        <p><b>Data Streaming Applications</b></p>
+                                        <p><b>Data Intensive Real-time Applications (DIRT)</b></p>
+                                        <p><b>JSON APIs based Applications</b></p>
+                                        <p><b>Single Page Applications</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator separator-primary"></div>
+                </div>
+
+                <div class="row">
+                    <div class="row justify-content-center" style="margin:auto;">
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="left" title="MEAN Stack" data-content="Mongo DB - BSON (binary JSON) Express JS - back end framework Angular - works in client side Node - web server build with chromium engine" data-container="body" style="margin-right:15px;">MEAN Stack</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="top" title="Chaining of Calls" data-content="request.on('data', function (data)) response.end()" data-container="body" style="margin-right:15px;">Chaining of Calls</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="right" title="Expression" data-content="app.get('/login', function (request, response)) app.use(express.static('public'))" data-container="body" style="margin-right:15px;">Expression</button>
+                    </div>
+                </div>
+                <div class="separator separator-primary"></div>
+
+                <h3 class="title">Node.js Features</h3>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 col-xl-7 offset-xl-0" style="margin:auto;">
+                        <div class="card">
+                            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#functions" role="tab">
+                                        Features
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="functions" role="tabpanel">
+                                        <div class="text-left">
+                                            <p><b>Asynchronous and Event Driven</b> - All APIs of Node.js library are asynchronous, that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data. The server moves to the next API after calling it and a notification mechanism of Events of Node.js helps the server to get a response from the previous API call.</p>
+                                            <p><b>Very Fast</b> - Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution.</p>
+                                            <p><b>Single Threaded but Highly Scalable</b> - Node.js uses a single threaded model with event looping. Event mechanism helps the server to respond in a non-blocking way and makes the server highly scalable as opposed to traditional servers which create limited threads to handle requests. Node.js uses a single threaded program and the same program can provide service to a much larger number of requests than traditional servers like Apache HTTP Server.</p>
+                                            <p><b>No Buffering</b> - Node.js applications never buffer any data. These applications simply output the data in chunks.</p>
+                                            <p><b>License</b> - Node.js is released under the MIT license</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator separator-primary"></div>
+            </div>
+        </div>
+
+        <footer class="footer footer-default">
+            <div class="container">
+                <div class="copyright">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        REFERENCES
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, Designed by
+                    <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Sart Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>
+                    <h4 class="title title-up">References</h4>
+                </div>
+                <div class="modal-body">
+                    <a href="https://www.tutorialspoint.com/nodejs">https://www.tutorialspoint.com/nodejs
+                    </a>
+                    <a href="https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm">https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Modal -->
+</body>
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/core/tether.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/now-ui-kit.js" type="text/javascript"></script>
+
+</html>
