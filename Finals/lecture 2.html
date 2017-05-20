@@ -1,127 +1,292 @@
-<!DOCTYPE HTML>
-	<html>
-	    <body>
-	      <nav class="navClass">
-	        <ul>
-	          <li><a href="index.html">HOME</a></li>
-	          <li>LECTURES
-	            <ul class="navlecture">
-	                <li><a href ="lecture 1.html">Lecture 1</a></li>
-	                <li><a href ="lecture 2.html">Lecture 2</a></li>
-	                <li><a href ="lecture 3.html">Lecture 3</a></li>
-	                <li><a href ="lecture 4.html">Lecture 4</a></li>
-	                <li><a href ="lecture 5.html">Lecture 5</a></li>
+<!DOCTYPE html>
+<html lang="en">
 
-	            </ul>
-	         </li>
-	          <li><a>GLOSSARY</a></li>
-	          <li><a>ABOUT OUR PAGE</a></li>
-	        </ul>
-	      </nav>
-        <div class="lecture lecture 1" id = "lecture 1">
-            <h1>Lecture 2: Java Server Pages (JSP) </h1>
-<p> - servlet in disguise. </p>
-<p> <meta http-equiv = "Content-Type" content="text/html" </p>
-<ul>
-<h3> JSPService Method </h3>
-<li> GET </li>
-<li> POST - HttpServeletRequest </li>
-<li> HEAD - HttpServeletResponse</li>
-</ul>
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>PHP</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/now-ui-kit.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+</head>
 
-<ul>
-<li> JSP Comment </li>
-<p> <%--
---%> available in developers view </p>
-<li> JSP Directives </li>
-<p> <%@page contentType="text/html" pageEncoding="UTF-8" import = "java.util.Date"%> </p>
-	<p> <%@include% </p>
-	<p> <%@page% </p>
-	<p> <%@taglib% </p>
-<ul> Attributes
-<li> autoflash </li>
-<li> buffer </li>
-<li> contentType </li>
-<li> error page </p>
-<li> extends </li>
-<li> info </li>
-<li> isELIgnored </li>
-<li> isErrorPage </li>
-<li> isThreadSafe </li>
-<li> language </li>
-<li> pageEncoding </li>
-<li> Session </li>
-</ul>
-<li> JSP Template Text -static content </li>
-<p> "<h1>...</h1>" </p>
-<p> "<p>....</p>" </p>
-<li> JSP Standard Actions </li>
-<p> <jsp:include page= "WEB-INF/fragments/includecontent.html/"> </p>
-<p> <jsp:forward page= " " > </p>
-<p> <jsp:element name = "a"> </p>
-<p> <jsp:attribute name = "href"> </p>
-<li> EL Expressions </li>
-<p> - expression language </p>
-<p> "<p>${param.name}! </p>" </p>
-<p> "<p> your browser is ${header['user-Agent']} </p>" </p>
-<ul>
-<li> paramValues </li>
-<li> headerValues </li>
-<li> pageContext </li>
-<li> pageScope </li>
-<li> requestScope </li>
-</ul>
-
-<ul>
-<h3> JSP Scriplet </h3>
-<p> - java embeded to JSP. </p>
-<li> Scriplet Scriplet </li>
-<p> int i =0;
-for (_;i<5;i++) {
-out.println("hello!");
-} </p>
-<li> Scriplet Expression </li>
-<p> "<p> Today is <%=(newDate()).toString()%>. </p>" </p>
-<li> Scriplet Declaration - can declare instance variables </li>
-<p> <%! 
-private int z;
-method --
-%> </p>
-</ul>
-
-<ul>
-<h3> JSP Standard Tag Library </h3>
-<li> <%@taglib = "http://java.sun.com/jsp/jstl/core" prefix = "core" %> </li>
-<li> <%@taglib = "http://java.sun.com/jsp/jstl/function" prefix = "func" %> </li>
-<li> <%@taglib = "http://java.sun.com/jsp/jstl/sql" prefix = "sql" %> </li>
-<li> <%@taglib = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %> </li>
-<li> <%@taglib = "http://java.sun.com/jsp/jstl/xml" prefix = "xml" %> </li>
-</ul>
-
-<ul>
-<h3> SSTL Custom Actions </h3>
-<ul>
-<li> <sql: dateParam/> </li>
-<li> <sql: param> </li>
-<li> <sql: query> </li>
-<li> <sql: setDateSource/> </li>
-<li> <sql: transaction> </li>
-<li> <sql: update> </li>
-</ul>
-<ul>
-<li> <sql: setDataSource/> </li>
-<li> <sql: driver = "" /> </li>
-<li> <sql: url = "" /> </li>
-<li> <sql: user = "" /> </li>
-<li> <sql: pass = "" /> </li>
-</ul>
-<ul>
-<li> <sql: query var="result"> </li>
-<li> <sql: param value="EL"/>
-</ul>
-</ul>
-    
+<body class="profile-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-toggleable-md bg-primary fixed-top navbar-transparent " color-on-scroll="500">
+        <div class="container">
+            <div class="dropdown button-dropdown">
+                <a href="index.html" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+            </div>
+            <div class="navbar-translate">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    WebTek 2017
+                </a>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="assets/img/blurred-image-1.jpg" style="">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Prelim
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="prelim/lecture%201.html">Internet and the World Wide Web</a>
+                            <a class="dropdown-item" href="prelim/lecture%202.html">Hypertext Transfer Protocol (HTTP)</a>
+                            <a class="dropdown-item" href="prelim/lecture%203.html">Hypertext Resource Addressing</a>
+                            <a class="dropdown-item" href="prelim/lecture%204.html">HTTP Request Message</a>
+                            <a class="dropdown-item" href="prelim/lecture%205.html">HTTP Response Message</a>
+                            <a class="dropdown-item" href="prelim/lecture%206.html">HTTP Request Methods</a>
+                            <a class="dropdown-item" href="prelim/lecture%207.html">HTTP Message Headers</a>
+                            <a class="dropdown-item" href="prelim/lecture%208.html">HTTP Status Codes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Midterm
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="midterm/lecture%201.html">Hypertext Markup Language (HTML)</a>
+                            <a class="dropdown-item" href="midterm/lecture%202.html">Cascading Style Sheets (CSS)</a>
+                            <a class="dropdown-item" href="midterm/lecture%203.html">Javascript (JS)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <p>
+                                Final
+                            </p>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="lecture1.html">Java Servlet and JSP</a>
+                            <a class="dropdown-item" href="lecture2.html">PHP</a>
+                            <a class="dropdown-item" href="lecture3.html">NodeJS</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+        <div class="page-header page-header-small" filter-color="orange">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img/web.jpg');">
+            </div>
+            <div class="container">
+                <div class="content-center">
+                    <h1 class="title">PHP: Hypertext Preprocessor</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <h3 class="title">PHP: Hypertext Preprocessor</h3>
+                <h5 class="description">PHP is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</h5>
+
+                <div class="row">
+
+                    <div class="col-md-10 offset-md-1 col-xl-6 offset-xl-0">
+                        <!-- Tabs with Background on Card -->
+                        <div class="card">
+                            <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">PHP Markup</a>
+                                </li>
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="home1" role="tabpanel">
+                                        <pre>
+                 &lt;!DOCTYPE HTML&gt;
+                 &lt;html&gt;
+
+                 &lt;head&gt;
+                     &lt;title>Example&lt;/title&gt;
+                 &lt;/head&gt;
+
+                 &lt;body>
+
+                     &lt;?php
+                        echo "Hi, I'm a PHP script!";
+                     ?&gt;
+
+                 &lt;/body&gt;
+
+                 &lt;/html&gt;
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Tabs on plain Card -->
+                    </div>
+
+                    <div class="col-md-10 offset-md-1 col-xl-6 offset-xl-0">
+                        <!-- Nav tabs -->
+                        <div class="card">
+                            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">
+                                        PHP
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="home" role="tabpanel">
+                                        <p>Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP script!"). The PHP code is enclosed in special start and end processing instructions
+                                            <?php and ?> that allow you to jump into and out of "PHP mode."</p>
+                                        <p>What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was. You can even configure your web server to process all your HTML files with PHP, and then there's really no way that users can tell what you have up your sleeve.</p>
+                                        <p>The best things in using PHP are that it is extremely simple for a newcomer, but offers many advanced features for a professional programmer. Don't be afraid reading the long list of PHP's features. You can jump in, in a short time, and start writing simple scripts in a few hours.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator separator-primary"></div>
+                </div>
+
+                <h3 class="title">PHP Global Variables - Superglobals</h3>
+                <div class="row">
+                    <div class="row justify-content-center" style="margin:auto;">
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="bottom" title="$GLOBALS" data-content="PHP super global variable which is used to access global variables from anywhere in the PHP script." data-container="body" style="margin-right:15px;">$GLOBALS</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="top" title="$_SERVER" data-content="PHP super global variable which holds information about headers, paths, and script locations." data-container="body" style="margin-right:15px;">$_SERVER</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="bottom" title="$_REQUEST" data-content="PHP $_REQUEST is used to collect data after submitting an HTML form." data-container="body" style="margin-right:15px;">$_REQUEST</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="top" title="$_POST" data-content="PHP $_POST is widely used to collect form data after submitting an HTML form with method=post. $_POST is also widely used to pass variables." data-container="body" style="margin-right:15px;">$_POST</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="bottom" title="$_GET" data-content="PHP $_GET can also be used to collect form data after submitting an HTML form with method=get. $_GET can also collect data sent in the URL." data-container="body" style="margin-right:15px;">$_GET</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="top" title="$_FILES" data-content="" data-container="body" style="margin-right:15px;">$_FILES</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="bottom" title="$_ENV" data-content="" data-container="body" style="margin-right:15px;">$_ENV</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="top" title="$_COOKIE" data-content="" data-container="body" style="margin-right:15px;">$_COOKIE</button>
+                        <button type="button" class="btn btn-default" data-color="popover-primary" data-toggle="popover" data-placement="bottom" title="$_SESSION" data-content="" data-container="body" style="margin-right:15px;">$_SESSION</button>
+                    </div>
+                </div>
+                <div class="separator separator-primary"></div>
+
+                <h3 class="title">PHP Session Functions</h3>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1 col-xl-7 offset-xl-0" style="margin:auto;">
+                        <div class="card">
+                            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#functions" role="tab">
+                                        Session Functions
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-block">
+                                <!-- Tab panes -->
+                                <div class="tab-content text-center">
+                                    <div class="tab-pane active" id="functions" role="tabpanel">
+                                        <div class="text-left">
+                                            <p><b>session_abort</b> - Discard session array changes and finish session</p>
+                                            <p><b>session_cache_expire</b> - Return current cache expire</p>
+                                            <p><b>session_cache_limiter</b> - Get and/or set the current cache limiter</p>
+                                            <p><b>session_commit</b> - Alias of session_write_close</p>
+                                            <p><b>session_create_id</b> - Create new session id</p>
+                                            <p><b>session_decode</b> - Decodes session data from a session encoded string</p>
+                                            <p><b>session_destroy</b> - Destroys all data registered to a session</p>
+                                            <p><b>session_encode</b> - Encodes the current session data as a session encoded string</p>
+                                            <p><b>session_gc</b> - Perform session data garbage collection </p>
+                                            <p><b>session_get_cookie_params</b> - Get the session cookie parameters </p>
+                                            <p><b>session_id</b> - Get and/or set the current session id </p>
+                                            <p><b>session_is_registered</b> - Find out whether a global variable is registered in a session </p>
+                                            <p><b> session_module_name</b> - Get and/or set the current session module </p>
+                                            <p><b>session_name</b> - Get and/or set the current session name</p>
+                                            <p><b>session_regenerate_id</b> - Update the current session id with a newly generated one</p>
+                                            <p><b>session_register_shutdown</b> - Session shutdown function</p>
+                                            <p><b>session_register</b> - Register one or more global variables with the current session</p>
+                                            <p><b>session_reset</b> - Re-initialize session array with original values</p>
+                                            <p><b>session_save_path</b> - Get and/or set the current session save path</p>
+                                            <p><b>session_set_cookie_params</b> - Set the session cookie parameters</p>
+                                            <p><b>session_set_save_handler</b> - Sets user-level session storage functions</p>
+                                            <p><b>session_start</b> - Start new or resume existing session</p>
+                                            <p><b>session_status</b> - Returns the current session status</p>
+                                            <p><b>session_unregister</b> - Unregister a global variable from the current session</p>
+                                            <p><b>session_unset</b> - Free all session variables</p>
+                                            <p><b>session_write_close</b> - Write session data and end session</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator separator-primary"></div>
+            </div>
+        </div>
+
+        <footer class="footer footer-default">
+            <div class="container">
+                <div class="copyright">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        REFERENCES
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>, Designed by
+                    <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+                    <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Sart Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>
+                    <h4 class="title title-up">References</h4>
+                </div>
+                <div class="modal-body">
+                    <a href="http://php.net/manual/en/intro-whatis.php">http://php.net/manual/en/intro-whatis.php
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/PHP">https://en.wikipedia.org/wiki/PHP</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Modal -->
 </body>
-    
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="assets/js/core/tether.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/now-ui-kit.js" type="text/javascript"></script>
+
 </html>
